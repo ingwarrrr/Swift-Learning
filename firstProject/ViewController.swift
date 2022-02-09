@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         gameFieldView.layer.borderWidth = 1
         gameFieldView.layer.cornerRadius = 5
         updateUI()
+        
     }
     
     @IBAction func stepperChanged(_ sender: UIStepper) {

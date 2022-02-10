@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		789A80BE27B5A711000101E8 /* GameControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 789A80BD27B5A711000101E8 /* GameControlView.xib */; };
+		789A80C027B5A8B3000101E8 /* GameControlViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A80BF27B5A8B3000101E8 /* GameControlViewClass.swift */; };
 		78C5FA3E27A5451900B38554 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C5FA3D27A5451900B38554 /* AppDelegate.swift */; };
 		78C5FA4027A5451900B38554 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C5FA3F27A5451900B38554 /* SceneDelegate.swift */; };
 		78C5FA4227A5451900B38554 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C5FA4127A5451900B38554 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		789A80BD27B5A711000101E8 /* GameControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameControlView.xib; sourceTree = "<group>"; };
+		789A80BF27B5A8B3000101E8 /* GameControlViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControlViewClass.swift; sourceTree = "<group>"; };
 		78C5FA3A27A5451900B38554 /* firstProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C5FA3D27A5451900B38554 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78C5FA3F27A5451900B38554 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				78C5FA4627A5451A00B38554 /* Assets.xcassets */,
 				78C5FA4827A5451A00B38554 /* LaunchScreen.storyboard */,
 				78C5FA4B27A5451A00B38554 /* Info.plist */,
+				789A80BD27B5A711000101E8 /* GameControlView.xib */,
+				789A80BF27B5A8B3000101E8 /* GameControlViewClass.swift */,
 			);
 			path = firstProject;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			files = (
 				78C5FA4A27A5451A00B38554 /* LaunchScreen.storyboard in Resources */,
 				78C5FA4727A5451A00B38554 /* Assets.xcassets in Resources */,
+				789A80BE27B5A711000101E8 /* GameControlView.xib in Resources */,
 				78C5FA4527A5451900B38554 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78C5FA4227A5451900B38554 /* ViewController.swift in Sources */,
+				789A80C027B5A8B3000101E8 /* GameControlViewClass.swift in Sources */,
 				78C5FA3E27A5451900B38554 /* AppDelegate.swift in Sources */,
 				78C5FA4027A5451900B38554 /* SceneDelegate.swift in Sources */,
 			);

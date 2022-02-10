@@ -16,28 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время: 30 сек" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djR-EO-sbH">
-                                <rect key="frame" x="20" y="59.5" width="113" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQs-fG-KKR">
-                                <rect key="frame" x="171" y="96" width="72" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Начать"/>
-                                <connections>
-                                    <action selector="actionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mY1-Ow-iWO"/>
-                                </connections>
-                            </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="456-OI-LJ0">
-                                <rect key="frame" x="300" y="54" width="94" height="32"/>
-                                <connections>
-                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="YFr-AS-an4"/>
-                                </connections>
-                            </stepper>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccO-y2-Ves">
-                                <rect key="frame" x="20" y="137" width="374" height="708"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccO-y2-Ves">
+                                <rect key="frame" x="20" y="125" width="374" height="720"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="euw-lG-ieA">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -63,35 +43,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cEa-et-weB" customClass="GameControlViewClass" customModule="firstProject" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="382" height="73"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OQs-fG-KKR" firstAttribute="top" secondItem="456-OI-LJ0" secondAttribute="bottom" constant="10" id="9H4-UI-ctp"/>
-                            <constraint firstItem="djR-EO-sbH" firstAttribute="centerY" secondItem="456-OI-LJ0" secondAttribute="centerY" id="AJd-Mi-8dq"/>
-                            <constraint firstItem="456-OI-LJ0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="HCq-yN-TvT"/>
+                            <constraint firstItem="cEa-et-weB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3dW-Qm-2W0"/>
+                            <constraint firstItem="ccO-y2-Ves" firstAttribute="top" secondItem="cEa-et-weB" secondAttribute="bottom" constant="8" id="7ve-md-2T1"/>
                             <constraint firstItem="R1g-i0-r6y" firstAttribute="top" secondItem="ccO-y2-Ves" secondAttribute="bottom" constant="10" id="HpD-6a-kKc"/>
-                            <constraint firstItem="OQs-fG-KKR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WUw-Eo-Mln"/>
                             <constraint firstAttribute="bottom" secondItem="R1g-i0-r6y" secondAttribute="bottom" constant="20" id="WbO-p5-RBt"/>
                             <constraint firstItem="ccO-y2-Ves" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aI5-Uv-kuQ"/>
                             <constraint firstItem="R1g-i0-r6y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="clN-Yn-DT6"/>
-                            <constraint firstItem="OQs-fG-KKR" firstAttribute="top" secondItem="456-OI-LJ0" secondAttribute="bottom" constant="10" id="jFo-G8-GhQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="456-OI-LJ0" secondAttribute="trailing" constant="20" id="k1Z-ON-zo5"/>
-                            <constraint firstItem="ccO-y2-Ves" firstAttribute="top" secondItem="OQs-fG-KKR" secondAttribute="bottom" constant="10" id="qrP-N1-1bC"/>
-                            <constraint firstItem="djR-EO-sbH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="shE-Mn-lvt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cEa-et-weB" secondAttribute="trailing" constant="16" id="eFD-oP-1mp"/>
+                            <constraint firstItem="cEa-et-weB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eKe-Dr-KeG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ccO-y2-Ves" secondAttribute="trailing" constant="20" id="xUm-o5-EKD"/>
-                            <constraint firstItem="456-OI-LJ0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="djR-EO-sbH" secondAttribute="trailing" id="yd7-qZ-BEj"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="actionButton" destination="OQs-fG-KKR" id="Q8W-FY-AiC"/>
+                        <outlet property="gameControl" destination="cEa-et-weB" id="vU7-4k-1az"/>
                         <outlet property="gameFieldView" destination="ccO-y2-Ves" id="xfj-Kc-h2k"/>
                         <outlet property="gameObject" destination="euw-lG-ieA" id="ZI5-kH-jT0"/>
                         <outlet property="scoreLabel" destination="R1g-i0-r6y" id="BHc-Lk-uVS"/>
                         <outlet property="shapeX" destination="Do1-YD-tVv" id="B4U-3c-LJh"/>
                         <outlet property="shapeY" destination="9BS-UU-Lhh" id="liF-9D-Z01"/>
-                        <outlet property="stepper" destination="456-OI-LJ0" id="Vwd-cm-1RQ"/>
-                        <outlet property="timeLabel" destination="djR-EO-sbH" id="Zo1-Zi-eNm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

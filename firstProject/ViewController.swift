@@ -31,7 +31,6 @@ class ViewController: UIViewController {
             self?.actionButtonTapped()
         }
         gameControl.gameDuration = 20
-
     }
     
     @IBAction func objectTapped(_ sender: UITapGestureRecognizer) {

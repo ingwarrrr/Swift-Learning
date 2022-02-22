@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccO-y2-Ves">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccO-y2-Ves">
                                 <rect key="frame" x="20" y="125" width="374" height="720"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="euw-lG-ieA">
@@ -43,7 +43,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cEa-et-weB" customClass="GameControlViewClass" customModule="firstProject" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEa-et-weB" customClass="GameControlViewClass" customModule="firstProject" customModuleProvider="target">
                                 <rect key="frame" x="16" y="44" width="382" height="73"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -60,6 +60,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cEa-et-weB" secondAttribute="trailing" constant="16" id="eFD-oP-1mp"/>
                             <constraint firstItem="cEa-et-weB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eKe-Dr-KeG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ccO-y2-Ves" secondAttribute="trailing" constant="20" id="xUm-o5-EKD"/>
+                            <constraint firstItem="ccO-y2-Ves" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="125" id="zKQ-s9-zcm"/>
                         </constraints>
                     </view>
                     <connections>

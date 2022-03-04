@@ -13,6 +13,9 @@
 		788DFE9E27C54E9B00AC3787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 788DFE9C27C54E9B00AC3787 /* Main.storyboard */; };
 		788DFEA027C54E9D00AC3787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 788DFE9F27C54E9D00AC3787 /* Assets.xcassets */; };
 		788DFEA327C54E9D00AC3787 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 788DFEA127C54E9D00AC3787 /* LaunchScreen.storyboard */; };
+		78E9449D27D2493900E37BE4 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9449C27D2493900E37BE4 /* SelectTimeViewController.swift */; };
+		78E9449F27D2498900E37BE4 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9449E27D2498900E37BE4 /* SettingsTableViewController.swift */; };
+		78E944A127D2529C00E37BE4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E944A027D2529C00E37BE4 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		788DFE9F27C54E9D00AC3787 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		788DFEA227C54E9D00AC3787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		788DFEA427C54E9D00AC3787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78E9449C27D2493900E37BE4 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
+		78E9449E27D2498900E37BE4 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		78E944A027D2529C00E37BE4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				788DFEA427C54E9D00AC3787 /* Info.plist */,
 				7801FCA027C726DF00D7E743 /* GameViewController.swift */,
 				7879D4D027C8642000C3341C /* Game.swift */,
+				78E9449C27D2493900E37BE4 /* SelectTimeViewController.swift */,
+				78E9449E27D2498900E37BE4 /* SettingsTableViewController.swift */,
+				78E944A027D2529C00E37BE4 /* Settings.swift */,
 			);
 			path = FindNumber;
 			sourceTree = "<group>";
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E944A127D2529C00E37BE4 /* Settings.swift in Sources */,
 				7801FCA127C726DF00D7E743 /* GameViewController.swift in Sources */,
+				78E9449F27D2498900E37BE4 /* SettingsTableViewController.swift in Sources */,
 				7879D4D127C8642000C3341C /* Game.swift in Sources */,
 				788DFE9727C54E9B00AC3787 /* AppDelegate.swift in Sources */,
+				78E9449D27D2493900E37BE4 /* SelectTimeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

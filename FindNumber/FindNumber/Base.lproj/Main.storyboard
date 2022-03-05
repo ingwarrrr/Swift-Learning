@@ -300,6 +300,7 @@
                         <outletCollection property="buttons" destination="nfq-IJ-FHk" collectionClass="NSMutableArray" id="nUa-iz-YNw"/>
                         <outletCollection property="buttons" destination="zTQ-By-Dez" collectionClass="NSMutableArray" id="bh0-XL-kLa"/>
                         <outletCollection property="buttons" destination="rhm-ui-uNr" collectionClass="NSMutableArray" id="oEy-Dr-Kce"/>
+                        <segue destination="RIQ-XQ-cVK" kind="presentation" identifier="recordVC" modalPresentationStyle="fullScreen" id="1eO-iS-0JZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sWh-Kx-3kH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -341,7 +342,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Рекорд"/>
                                         <connections>
-                                            <segue destination="A7e-YU-GDy" kind="show" id="TAj-V8-9CD"/>
+                                            <segue destination="RIQ-XQ-cVK" kind="presentation" modalPresentationStyle="fullScreen" id="TAj-V8-9CD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -447,7 +448,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Таймер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0Q-VL-5jS">
-                                                    <rect key="frame" x="20" y="11.5" width="61" height="21"/>
+                                                    <rect key="frame" x="20" y="11.5" width="323" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -460,6 +461,7 @@
                                                 </switch>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="3ff-PF-OVv" firstAttribute="leading" secondItem="y0Q-VL-5jS" secondAttribute="trailing" id="DVT-nm-nis"/>
                                                 <constraint firstItem="y0Q-VL-5jS" firstAttribute="centerY" secondItem="9Lg-kM-KXK" secondAttribute="centerY" id="TU0-9t-nej"/>
                                                 <constraint firstItem="3ff-PF-OVv" firstAttribute="centerY" secondItem="9Lg-kM-KXK" secondAttribute="centerY" id="a2J-yD-7Gt"/>
                                                 <constraint firstAttribute="trailing" secondItem="3ff-PF-OVv" secondAttribute="trailing" constant="22" id="cI3-71-yaj"/>
@@ -491,6 +493,7 @@
                                                 <constraint firstItem="eBG-et-4HC" firstAttribute="centerY" secondItem="Tsl-fD-8hi" secondAttribute="centerY" id="MGq-y0-fGK"/>
                                                 <constraint firstItem="kRa-pI-PlR" firstAttribute="trailing" secondItem="Tsl-fD-8hi" secondAttribute="trailingMargin" id="MMj-Od-avy"/>
                                                 <constraint firstItem="eBG-et-4HC" firstAttribute="leading" secondItem="Tsl-fD-8hi" secondAttribute="leadingMargin" id="bsB-hl-8bz"/>
+                                                <constraint firstItem="kRa-pI-PlR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eBG-et-4HC" secondAttribute="trailing" constant="8" symbolic="YES" id="fI4-yk-ypu"/>
                                                 <constraint firstItem="kRa-pI-PlR" firstAttribute="centerY" secondItem="Tsl-fD-8hi" secondAttribute="centerY" id="zn4-gi-LOn"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -542,20 +545,62 @@
         <!--Рекорд-->
         <scene sceneID="DlK-bo-SJO">
             <objects>
-                <viewController id="A7e-YU-GDy" sceneMemberID="viewController">
+                <viewController id="A7e-YU-GDy" customClass="RecordViewController" customModule="FindNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9cn-Hg-lk4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90e-W1-Rgw">
+                                <rect key="frame" x="186" y="464.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UVq-1h-gcf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="90e-W1-Rgw" firstAttribute="centerX" secondItem="UVq-1h-gcf" secondAttribute="centerX" id="kFK-Wg-2Fy"/>
+                            <constraint firstItem="90e-W1-Rgw" firstAttribute="centerY" secondItem="UVq-1h-gcf" secondAttribute="centerY" id="ytt-07-cyQ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Рекорд" id="ZK9-x2-M1i"/>
+                    <navigationItem key="navigationItem" title="Рекорд" id="ZK9-x2-M1i">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ksn-k5-lLM">
+                            <connections>
+                                <action selector="closeVC:" destination="A7e-YU-GDy" id="Wdx-mA-9xC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="recordLabel" destination="90e-W1-Rgw" id="vSR-9L-2H2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsL-ah-zgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="-636"/>
+            <point key="canvasLocation" x="888" y="-636"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="V4n-DF-wwk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RIQ-XQ-cVK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3U0-eK-FHX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A7e-YU-GDy" kind="relationship" relationship="rootViewController" id="y9n-0p-CF2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KcM-n1-FRr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.608695652173921" y="-636.16071428571422"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1eO-iS-0JZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

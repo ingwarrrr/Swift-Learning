@@ -8,6 +8,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    // MARK: - PROPERTIES
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var nextDigit: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
@@ -19,6 +20,8 @@ class GameViewController: UIViewController {
         self.timerLabel.text = seconds.secondsToString()
         self.updateInfoGame(with: status)
     }
+    
+    // MARK: - LIFFE CYCLE
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,19 +77,72 @@ class GameViewController: UIViewController {
     
     private func updateInfoGame(with status: StatusGame) {
         switch status {
-            case .start:
-                statusLabel.text = "Игра началась"
-                statusLabel.textColor = .black
-                newGameButton.isHidden = true
-            case .win:
-                statusLabel.text = "Вы выиграли"
-                statusLabel.textColor = .green
-                newGameButton.isHidden = false
-            case .lose:
-                statusLabel.text = "Вы проиграли"
-                statusLabel.textColor = .red
-                newGameButton.isHidden = false
+        case .start:
+            statusLabel.text = "Игра началась"
+            statusLabel.textColor = .black
+            newGameButton.isHidden = true
+            // FIXME:  пофиксить
+            // #warning("fix this")
+            // #error("ERROR")
+        case .win:
+            statusLabel.text = "Вы выиграли"
+            statusLabel.textColor = .green
+            newGameButton.isHidden = false
+            if game.isNewRecord {
+                showAlert()
+            } else {
+                showAlertActionSheet()
+            }
+        case .lose:
+            statusLabel.text = "Вы проиграли"
+            statusLabel.textColor = .red
+            newGameButton.isHidden = false
+            showAlertActionSheet()
         }
+    }
+    
+    private func showAlert() {
+        // создаем контроллер алерта и кнопку выхода
+        let alert = UIAlertController(title: "Поздравляем!", message: "Вы установили новый рекорд!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ок", style: .default, handler: nil)
+        //привязываем кнопку к алерту и выводем алерт на экран
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func showAlertActionSheet() {
+        let alert = UIAlertController(title: "Что вы хотите сделать далее?", message: nil, preferredStyle: .actionSheet)
+        // кнопка новой игры
+        let newGameAction = UIAlertAction(title: "Начать новую игру", style: .default) { [weak self] _ in
+            self?.game.newGame()
+            self?.setupScreen()
+        }
+        let showRecord = UIAlertAction(title: "Посмотреть рекорд", style: .default) { [weak self] _ in
+            
+            self?.performSegue(withIdentifier: "recordVC", sender: nil)
+        }
+        let menuAction = UIAlertAction(title: "Перейти в меню", style: .destructive) { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+        
+        alert.addAction(newGameAction)
+        alert.addAction(showRecord)
+        alert.addAction(menuAction)
+        alert.addAction(cancelAction)
+        
+        if let popover = alert.popoverPresentationController {
+            // привязываем поповер к въюхе
+            // popover.sourceView = self.view
+            // привязываем поповер к лайблу
+            popover.sourceView = statusLabel
+            // нижнее можно убрать
+            popover.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            // убираем стрелочку поповера
+            popover.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0)
+        }
+        
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func newGame(_ sender: UIButton) {

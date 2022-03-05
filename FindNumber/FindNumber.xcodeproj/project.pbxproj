@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7801FCA127C726DF00D7E743 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7801FCA027C726DF00D7E743 /* GameViewController.swift */; };
+		78296BE427D37D7500AF7D97 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78296BE327D37D7500AF7D97 /* RecordViewController.swift */; };
 		7879D4D127C8642000C3341C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879D4D027C8642000C3341C /* Game.swift */; };
 		788DFE9727C54E9B00AC3787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DFE9627C54E9B00AC3787 /* AppDelegate.swift */; };
 		788DFE9E27C54E9B00AC3787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 788DFE9C27C54E9B00AC3787 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		7801FCA027C726DF00D7E743 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		78296BE327D37D7500AF7D97 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		7879D4D027C8642000C3341C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		788DFE9327C54E9B00AC3787 /* FindNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		788DFE9627C54E9B00AC3787 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				78E9449C27D2493900E37BE4 /* SelectTimeViewController.swift */,
 				78E9449E27D2498900E37BE4 /* SettingsTableViewController.swift */,
 				78E944A027D2529C00E37BE4 /* Settings.swift */,
+				78296BE327D37D7500AF7D97 /* RecordViewController.swift */,
 			);
 			path = FindNumber;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				78E944A127D2529C00E37BE4 /* Settings.swift in Sources */,
 				7801FCA127C726DF00D7E743 /* GameViewController.swift in Sources */,
 				78E9449F27D2498900E37BE4 /* SettingsTableViewController.swift in Sources */,
+				78296BE427D37D7500AF7D97 /* RecordViewController.swift in Sources */,
 				7879D4D127C8642000C3341C /* Game.swift in Sources */,
 				788DFE9727C54E9B00AC3787 /* AppDelegate.swift in Sources */,
 				78E9449D27D2493900E37BE4 /* SelectTimeViewController.swift in Sources */,

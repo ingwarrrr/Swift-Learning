@@ -15,6 +15,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Оаисание сущности клиента
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Client", in: persistentContainer.viewContext)
+        
+        // создание объекта
+        // let managedObject = NSManagedObject(entity: entityDescription!, insertInto: persistentContainer.viewContext)
+        let managedObject = Client(entity: entityDescription!, insertInto: persistentContainer.viewContext)
+        
+        // установка значения атрибута
+        // managedObject.setValue("Владимир", forKey: "name")
+        managedObject.name = "Владимир"
+        
+        // извлечение значения атрибута
+        // let name = managedObject.value(forKey: "name")
+        let name = managedObject.name
+        print("name = \(String(describing: name))")
+        
+        // запись объекта
+        // saveContext()
+        
+        // извлечение записей из хранилища
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Client")
+        do {
+            let results = try persistentContainer.viewContext.fetch(fetchRequest)
+            // for result in results as! [NSManagedObject] {
+            // print("name - \(String(describing: result.value(forKey: "name")!))")
+            for result in results as! [Client] {
+                print("name - \(result.name!)")
+                
+                // удаление объекта
+                persistentContainer.viewContext.delete(result)
+            }
+        } catch {
+            print(error)
+        }
+        
+        saveContext()
+        
         return true
     }
 

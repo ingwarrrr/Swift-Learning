@@ -14,6 +14,11 @@
 		780B157B27D7ACF000A6D7A5 /* JustTryingCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 780B157927D7ACF000A6D7A5 /* JustTryingCoreData.xcdatamodeld */; };
 		780B157D27D7ACF300A6D7A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 780B157C27D7ACF300A6D7A5 /* Assets.xcassets */; };
 		780B158027D7ACF300A6D7A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780B157E27D7ACF300A6D7A5 /* LaunchScreen.storyboard */; };
+		78DC41B227D9EDAA00459646 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DC41B127D9EDAA00459646 /* CoreDataManager.swift */; };
+		78DC41B427D9F3A100459646 /* ClientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DC41B327D9F3A100459646 /* ClientsTableViewController.swift */; };
+		78DC41B627DA195700459646 /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DC41B527DA195700459646 /* ClientViewController.swift */; };
+		78DC41B827DA366600459646 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DC41B727DA366600459646 /* ServiceViewController.swift */; };
+		78DC41BA27DA367D00459646 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DC41B927DA367D00459646 /* ServicesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		780B157C27D7ACF300A6D7A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		780B157F27D7ACF300A6D7A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		780B158127D7ACF300A6D7A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78DC41B127D9EDAA00459646 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		78DC41B327D9F3A100459646 /* ClientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsTableViewController.swift; sourceTree = "<group>"; };
+		78DC41B527DA195700459646 /* ClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
+		78DC41B727DA366600459646 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		78DC41B927DA367D00459646 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,11 @@
 				780B157E27D7ACF300A6D7A5 /* LaunchScreen.storyboard */,
 				780B158127D7ACF300A6D7A5 /* Info.plist */,
 				780B157927D7ACF000A6D7A5 /* JustTryingCoreData.xcdatamodeld */,
+				78DC41B127D9EDAA00459646 /* CoreDataManager.swift */,
+				78DC41B327D9F3A100459646 /* ClientsTableViewController.swift */,
+				78DC41B527DA195700459646 /* ClientViewController.swift */,
+				78DC41B727DA366600459646 /* ServiceViewController.swift */,
+				78DC41B927DA367D00459646 /* ServicesTableViewController.swift */,
 			);
 			path = JustTryingCoreData;
 			sourceTree = "<group>";
@@ -142,8 +157,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				780B157527D7ACF000A6D7A5 /* ViewController.swift in Sources */,
+				78DC41B627DA195700459646 /* ClientViewController.swift in Sources */,
 				780B157B27D7ACF000A6D7A5 /* JustTryingCoreData.xcdatamodeld in Sources */,
 				780B157127D7ACF000A6D7A5 /* AppDelegate.swift in Sources */,
+				78DC41B227D9EDAA00459646 /* CoreDataManager.swift in Sources */,
+				78DC41B427D9F3A100459646 /* ClientsTableViewController.swift in Sources */,
+				78DC41B827DA366600459646 /* ServiceViewController.swift in Sources */,
+				78DC41BA27DA367D00459646 /* ServicesTableViewController.swift in Sources */,
 				780B157327D7ACF000A6D7A5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +330,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -338,7 +358,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -23,7 +23,7 @@
         <relationship name="rowsOfOrders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RowOfOrder" inverseName="service" inverseEntity="RowOfOrder"/>
     </entity>
     <elements>
-        <element name="Client" positionX="-318.16162109375" positionY="-62.17266845703125" width="128" height="88"/>
+        <element name="Client" positionX="-318.16162109375" positionY="-62.17266845703125" width="128" height="74"/>
         <element name="Order" positionX="-165.7496948242188" positionY="-56.16763305664062" width="128" height="118"/>
         <element name="RowOfOrder" positionX="-13.01043701171875" positionY="15.37612915039062" width="128" height="88"/>
         <element name="Service" positionX="142.5922241210938" positionY="-37.46224975585938" width="128" height="88"/>

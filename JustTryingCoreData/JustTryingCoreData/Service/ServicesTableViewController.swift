@@ -11,6 +11,8 @@ import CoreData
 class ServicesTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     let fetchedResultsController = CoreDataManager.instance.fetchedResultsController(entityName: "Service", keyForSort: "name")
+    typealias Select = (Service?) -> ()
+    var didSelect: Select?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,7 +102,12 @@ class ServicesTableViewController: UITableViewController, NSFetchedResultsContro
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let service = fetchedResultsController.object(at: indexPath) as? Service
-        performSegue(withIdentifier: "servicesToService", sender: service)
+        if let dSelect = self.didSelect {
+            dSelect(service!)
+            dismiss(animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: "servicesToService", sender: service)
+        }
     }
     
     // MARK: - Navigation

@@ -19,6 +19,9 @@
 		78DC41B627DA195700459646 /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DC41B527DA195700459646 /* ClientViewController.swift */; };
 		78DC41B827DA366600459646 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DC41B727DA366600459646 /* ServiceViewController.swift */; };
 		78DC41BA27DA367D00459646 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DC41B927DA367D00459646 /* ServicesTableViewController.swift */; };
+		78E24E7F27DB9DE2002C3C8F /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E24E7E27DB9DE2002C3C8F /* OrdersTableViewController.swift */; };
+		78E24E8127DB9DFC002C3C8F /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E24E8027DB9DFC002C3C8F /* OrderViewController.swift */; };
+		78E24E8327DBD8D5002C3C8F /* RowOfOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E24E8227DBD8D5002C3C8F /* RowOfOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		78DC41B527DA195700459646 /* ClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
 		78DC41B727DA366600459646 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		78DC41B927DA367D00459646 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
+		78E24E7E27DB9DE2002C3C8F /* OrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
+		78E24E8027DB9DFC002C3C8F /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		78E24E8227DBD8D5002C3C8F /* RowOfOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowOfOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,9 @@
 		780B156F27D7ACF000A6D7A5 /* JustTryingCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				78E24E7D27DB9DC9002C3C8F /* Order */,
+				78E24E7C27DB9B63002C3C8F /* Service */,
+				78E24E7B27DB9A7D002C3C8F /* Client */,
 				780B157027D7ACF000A6D7A5 /* AppDelegate.swift */,
 				780B157227D7ACF000A6D7A5 /* SceneDelegate.swift */,
 				780B157427D7ACF000A6D7A5 /* ViewController.swift */,
@@ -77,12 +86,36 @@
 				780B158127D7ACF300A6D7A5 /* Info.plist */,
 				780B157927D7ACF000A6D7A5 /* JustTryingCoreData.xcdatamodeld */,
 				78DC41B127D9EDAA00459646 /* CoreDataManager.swift */,
+			);
+			path = JustTryingCoreData;
+			sourceTree = "<group>";
+		};
+		78E24E7B27DB9A7D002C3C8F /* Client */ = {
+			isa = PBXGroup;
+			children = (
 				78DC41B327D9F3A100459646 /* ClientsTableViewController.swift */,
 				78DC41B527DA195700459646 /* ClientViewController.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		78E24E7C27DB9B63002C3C8F /* Service */ = {
+			isa = PBXGroup;
+			children = (
 				78DC41B727DA366600459646 /* ServiceViewController.swift */,
 				78DC41B927DA367D00459646 /* ServicesTableViewController.swift */,
 			);
-			path = JustTryingCoreData;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		78E24E7D27DB9DC9002C3C8F /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				78E24E8227DBD8D5002C3C8F /* RowOfOrderViewController.swift */,
+				78E24E7E27DB9DE2002C3C8F /* OrdersTableViewController.swift */,
+				78E24E8027DB9DFC002C3C8F /* OrderViewController.swift */,
+			);
+			path = Order;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +189,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E24E7F27DB9DE2002C3C8F /* OrdersTableViewController.swift in Sources */,
+				78E24E8327DBD8D5002C3C8F /* RowOfOrderViewController.swift in Sources */,
 				780B157527D7ACF000A6D7A5 /* ViewController.swift in Sources */,
 				78DC41B627DA195700459646 /* ClientViewController.swift in Sources */,
 				780B157B27D7ACF000A6D7A5 /* JustTryingCoreData.xcdatamodeld in Sources */,
@@ -164,6 +199,7 @@
 				78DC41B427D9F3A100459646 /* ClientsTableViewController.swift in Sources */,
 				78DC41B827DA366600459646 /* ServiceViewController.swift in Sources */,
 				78DC41BA27DA367D00459646 /* ServicesTableViewController.swift in Sources */,
+				78E24E8127DB9DFC002C3C8F /* OrderViewController.swift in Sources */,
 				780B157327D7ACF000A6D7A5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

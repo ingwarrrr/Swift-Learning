@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m8r-hD-ovH">
-                                <rect key="frame" x="114" y="337" width="186.5" height="222"/>
+                                <rect key="frame" x="134.5" y="366" width="145" height="164"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sic-Qu-xyF">
-                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Clients">
                                             <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="24"/>
@@ -30,7 +30,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6g-Gc-mbb">
-                                        <rect key="frame" x="0.0" y="58" width="186.5" height="48"/>
+                                        <rect key="frame" x="0.0" y="58" width="145" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Services">
                                             <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="24"/>
@@ -40,18 +40,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eF0-t5-ppi">
-                                        <rect key="frame" x="0.0" y="116" width="186.5" height="48"/>
+                                        <rect key="frame" x="0.0" y="116" width="145" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Documents">
                                             <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="24"/>
                                         </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFI-Nf-2xf">
-                                        <rect key="frame" x="0.0" y="174" width="186.5" height="48"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Orders report">
-                                            <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="24"/>
-                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="bop-pm-Ke6" kind="show" id="Qk3-Kc-bnV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -68,6 +64,274 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="45.535714285714285"/>
+        </scene>
+        <!--Orders-->
+        <scene sceneID="C93-zj-v3A">
+            <objects>
+                <tableViewController id="bop-pm-Ke6" customClass="OrdersTableViewController" customModule="JustTryingCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5rT-Sj-feR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier2" id="7WE-6E-hrn">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7WE-6E-hrn" id="loE-EX-2YJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bop-pm-Ke6" id="ufw-DU-wFl"/>
+                            <outlet property="delegate" destination="bop-pm-Ke6" id="5AA-Od-sSU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Orders" id="yUg-tY-JSK">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="XuI-Z8-JY7">
+                            <connections>
+                                <action selector="AddOrder:" destination="bop-pm-Ke6" id="SQ8-dw-HGw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="RYk-vN-tZS" kind="presentation" identifier="ordersToOrder" id="DFz-1U-xxo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KMd-nT-qdz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="46"/>
+        </scene>
+        <!--Row Of Order View Controller-->
+        <scene sceneID="bJV-u2-8BK">
+            <objects>
+                <viewController id="KhF-NG-pOV" customClass="RowOfOrderViewController" customModule="JustTryingCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jVH-Cb-E9s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWq-gv-avx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Rows of Order" id="gIk-oF-eeF">
+                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="3yx-LG-3sQ">
+                                            <connections>
+                                                <action selector="cancel:" destination="KhF-NG-pOV" id="gVW-Os-K6Z"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="Xdq-RH-02C">
+                                            <connections>
+                                                <action selector="save:" destination="KhF-NG-pOV" id="7ls-eu-bWd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aHU-6C-Hkj">
+                                <rect key="frame" x="25" y="81" width="364" height="88"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aho-j0-tHW">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygh-Bh-lbH">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="34"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Klv-Ju-eU6">
+                                                <rect key="frame" x="78" y="0.0" width="245" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFn-1g-0tU">
+                                                <rect key="frame" x="331" y="0.0" width="33" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="&gt;"/>
+                                                <connections>
+                                                    <action selector="choiceRow:" destination="KhF-NG-pOV" eventType="touchUpInside" id="aEg-6p-0ez"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="MFn-1g-0tU" secondAttribute="trailing" id="LwA-6I-PB0"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TpR-XM-nfe">
+                                        <rect key="frame" x="0.0" y="54" width="364" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNk-DS-P9y">
+                                                <rect key="frame" x="0.0" y="0.0" width="39.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IDL-ez-NbH">
+                                                <rect key="frame" x="59.5" y="0.0" width="304.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hRi-P8-03G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BWq-gv-avx" firstAttribute="leading" secondItem="hRi-P8-03G" secondAttribute="leading" id="2SG-Eg-8oh"/>
+                            <constraint firstItem="BWq-gv-avx" firstAttribute="top" secondItem="hRi-P8-03G" secondAttribute="top" id="3J2-He-O2w"/>
+                            <constraint firstItem="aHU-6C-Hkj" firstAttribute="top" secondItem="BWq-gv-avx" secondAttribute="bottom" constant="25" id="5ZF-Gb-jjk"/>
+                            <constraint firstItem="aHU-6C-Hkj" firstAttribute="leading" secondItem="hRi-P8-03G" secondAttribute="leading" constant="25" id="70C-2K-cT9"/>
+                            <constraint firstItem="BWq-gv-avx" firstAttribute="trailing" secondItem="hRi-P8-03G" secondAttribute="trailing" id="HBA-QX-QXQ"/>
+                            <constraint firstItem="hRi-P8-03G" firstAttribute="trailing" secondItem="aHU-6C-Hkj" secondAttribute="trailing" constant="25" id="wnd-uz-z0i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textFieldService" destination="Klv-Ju-eU6" id="fFK-oD-kqQ"/>
+                        <outlet property="textFieldSum" destination="IDL-ez-NbH" id="l54-eW-BE8"/>
+                        <segue destination="IiP-b9-M89" kind="presentation" identifier="rowOfOrderToServices" id="CxZ-9y-KlQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mze-pN-xJm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3632" y="46"/>
+        </scene>
+        <!--Order View Controller-->
+        <scene sceneID="t59-kH-Pw1">
+            <objects>
+                <viewController id="RYk-vN-tZS" customClass="OrderViewController" customModule="JustTryingCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jo9-0r-3Uq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMg-Ex-cQv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Order" id="6dG-0J-OMS">
+                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="9Qb-Nc-UKk">
+                                            <connections>
+                                                <action selector="cancel:" destination="RYk-vN-tZS" id="5ob-BM-k0F"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="rTU-Mu-wZd">
+                                            <connections>
+                                                <action selector="save:" destination="RYk-vN-tZS" id="MaG-O4-oKn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="2Th-sc-JQA">
+                                <rect key="frame" x="0.0" y="56" width="414" height="216"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM9-ja-Tf3">
+                                <rect key="frame" x="20" y="286" width="68.5" height="34"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="awe-yy-pdA">
+                                <rect key="frame" x="97" y="283" width="255.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYp-ov-lj9">
+                                <rect key="frame" x="361" y="286" width="33" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="&gt;"/>
+                                <connections>
+                                    <action selector="choiceClient:" destination="RYk-vN-tZS" eventType="touchUpInside" id="x4m-LF-Fxa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I98-K4-opj">
+                                <rect key="frame" x="20" y="376" width="305" height="34"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rows Of Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyA-x9-GXE">
+                                <rect key="frame" x="20" y="424" width="380" height="34"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kKB-vY-Q8v">
+                                <rect key="frame" x="345" y="382" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paid:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDn-i9-BxH">
+                                <rect key="frame" x="20" y="334" width="303" height="34"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h9z-So-45q">
+                                <rect key="frame" x="345" y="331" width="51" height="31"/>
+                            </switch>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p5G-55-aS0">
+                                <rect key="frame" x="0.0" y="472" width="414" height="336"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m53-DN-5Zl">
+                                <rect key="frame" x="313" y="427" width="81" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Row"/>
+                                <connections>
+                                    <action selector="addRowOfOrder:" destination="RYk-vN-tZS" eventType="touchUpInside" id="XVF-7t-GhW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nlD-TZ-EzU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KMg-Ex-cQv" firstAttribute="top" secondItem="nlD-TZ-EzU" secondAttribute="top" id="0m4-7V-tey"/>
+                            <constraint firstItem="kKB-vY-Q8v" firstAttribute="leading" secondItem="I98-K4-opj" secondAttribute="trailing" constant="20" id="14i-if-78t"/>
+                            <constraint firstItem="KMg-Ex-cQv" firstAttribute="leading" secondItem="p5G-55-aS0" secondAttribute="leading" id="5CV-qR-glf"/>
+                            <constraint firstItem="h9z-So-45q" firstAttribute="top" secondItem="awe-yy-pdA" secondAttribute="bottom" constant="14" id="Cbh-gC-X5N"/>
+                            <constraint firstItem="p5G-55-aS0" firstAttribute="bottom" secondItem="nlD-TZ-EzU" secondAttribute="bottom" id="DVj-3j-s6Q"/>
+                            <constraint firstItem="nlD-TZ-EzU" firstAttribute="trailing" secondItem="m53-DN-5Zl" secondAttribute="trailing" constant="20" id="ExA-uv-kVU"/>
+                            <constraint firstItem="dyA-x9-GXE" firstAttribute="leading" secondItem="nlD-TZ-EzU" secondAttribute="leading" constant="20" id="FcD-E7-qft"/>
+                            <constraint firstItem="2Th-sc-JQA" firstAttribute="leading" secondItem="nlD-TZ-EzU" secondAttribute="leading" id="GZj-UL-pX0"/>
+                            <constraint firstItem="dyA-x9-GXE" firstAttribute="top" secondItem="I98-K4-opj" secondAttribute="bottom" constant="14" id="HTI-T9-PJf"/>
+                            <constraint firstItem="p5G-55-aS0" firstAttribute="top" secondItem="dyA-x9-GXE" secondAttribute="bottom" constant="14" id="Lzs-Hs-fRP"/>
+                            <constraint firstItem="I98-K4-opj" firstAttribute="leading" secondItem="nlD-TZ-EzU" secondAttribute="leading" constant="20" id="OfV-cO-tpt"/>
+                            <constraint firstItem="nlD-TZ-EzU" firstAttribute="trailing" secondItem="dyA-x9-GXE" secondAttribute="trailing" constant="14" id="WEK-W0-GKt"/>
+                            <constraint firstItem="MYp-ov-lj9" firstAttribute="leading" secondItem="awe-yy-pdA" secondAttribute="trailing" constant="8.5" id="WGB-So-xd2"/>
+                            <constraint firstItem="nlD-TZ-EzU" firstAttribute="trailing" secondItem="h9z-So-45q" secondAttribute="trailing" constant="20" id="YK9-Xo-58K"/>
+                            <constraint firstItem="KMg-Ex-cQv" firstAttribute="trailing" secondItem="p5G-55-aS0" secondAttribute="trailing" id="Yr7-8r-Ao5"/>
+                            <constraint firstItem="uDn-i9-BxH" firstAttribute="top" secondItem="KM9-ja-Tf3" secondAttribute="bottom" constant="14" id="a8m-Zf-mAw"/>
+                            <constraint firstItem="awe-yy-pdA" firstAttribute="leading" secondItem="KM9-ja-Tf3" secondAttribute="trailing" constant="8.5" id="ayz-4a-6ve"/>
+                            <constraint firstItem="nlD-TZ-EzU" firstAttribute="trailing" secondItem="MYp-ov-lj9" secondAttribute="trailing" constant="20" id="cmi-jA-kfS"/>
+                            <constraint firstItem="2Th-sc-JQA" firstAttribute="top" secondItem="KMg-Ex-cQv" secondAttribute="bottom" id="eIJ-tv-NW8"/>
+                            <constraint firstItem="kKB-vY-Q8v" firstAttribute="top" secondItem="uDn-i9-BxH" secondAttribute="bottom" constant="14" id="gV4-rT-xGo"/>
+                            <constraint firstItem="h9z-So-45q" firstAttribute="top" secondItem="MYp-ov-lj9" secondAttribute="bottom" constant="14" id="gXb-cf-Lv9"/>
+                            <constraint firstItem="KMg-Ex-cQv" firstAttribute="leading" secondItem="2Th-sc-JQA" secondAttribute="leading" id="ghz-m7-m93"/>
+                            <constraint firstItem="KMg-Ex-cQv" firstAttribute="trailing" secondItem="2Th-sc-JQA" secondAttribute="trailing" id="gj7-IO-spo"/>
+                            <constraint firstItem="nlD-TZ-EzU" firstAttribute="trailing" secondItem="2Th-sc-JQA" secondAttribute="trailing" id="i5h-1N-vrW"/>
+                            <constraint firstItem="m53-DN-5Zl" firstAttribute="top" secondItem="kKB-vY-Q8v" secondAttribute="bottom" constant="14" id="mpf-hf-e4u"/>
+                            <constraint firstItem="nlD-TZ-EzU" firstAttribute="trailing" secondItem="kKB-vY-Q8v" secondAttribute="trailing" constant="20" id="p9s-z8-ez8"/>
+                            <constraint firstItem="h9z-So-45q" firstAttribute="leading" secondItem="uDn-i9-BxH" secondAttribute="trailing" constant="22" id="sCw-5x-cbs"/>
+                            <constraint firstItem="KM9-ja-Tf3" firstAttribute="top" secondItem="2Th-sc-JQA" secondAttribute="bottom" constant="14" id="shQ-mr-zCc"/>
+                            <constraint firstItem="I98-K4-opj" firstAttribute="top" secondItem="h9z-So-45q" secondAttribute="bottom" constant="14" id="ton-Ml-39G"/>
+                            <constraint firstItem="KM9-ja-Tf3" firstAttribute="leading" secondItem="nlD-TZ-EzU" secondAttribute="leading" constant="20" id="vQc-re-13Y"/>
+                            <constraint firstItem="MYp-ov-lj9" firstAttribute="top" secondItem="2Th-sc-JQA" secondAttribute="bottom" constant="14" id="yRb-HU-Vhy"/>
+                            <constraint firstItem="uDn-i9-BxH" firstAttribute="leading" secondItem="nlD-TZ-EzU" secondAttribute="leading" constant="20" id="znL-Pc-ck1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="2Th-sc-JQA" id="rWm-fb-8ee"/>
+                        <outlet property="switchMade" destination="kKB-vY-Q8v" id="Nrq-S5-Bya"/>
+                        <outlet property="switchPaid" destination="h9z-So-45q" id="Kax-WT-es5"/>
+                        <outlet property="tableView" destination="p5G-55-aS0" id="U2r-YC-ZVM"/>
+                        <outlet property="textFieldClient" destination="awe-yy-pdA" id="rnA-NV-b2o"/>
+                        <segue destination="L0e-q6-xaa" kind="presentation" identifier="orderToClients" id="z4z-Zn-7sG"/>
+                        <segue destination="KhF-NG-pOV" kind="presentation" identifier="orderToRowOfOrder" id="1P4-Mc-AOC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YeD-j1-wta" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2702.898550724638" y="45.535714285714285"/>
         </scene>
         <!--Services-->
         <scene sceneID="zdA-7v-VH7">
@@ -331,6 +595,10 @@
             <point key="canvasLocation" x="-23.188405797101453" y="45.535714285714285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="6fr-YV-Su0"/>
+        <segue reference="Zr8-Jp-L6p"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

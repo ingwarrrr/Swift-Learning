@@ -1,16 +1,16 @@
 //
-//  ClientsTableViewController.swift
+//  OrdersTableViewController.swift
 //  JustTryingCoreData
 //
-//  Created by Igor on 10.03.2022.
+//  Created by Igor on 11.03.2022.
 //
 
 import UIKit
 import CoreData
 
-class ClientsTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class OrdersTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    let fetchedResultsController = CoreDataManager.instance.fetchedResultsController(entityName: "Client", keyForSort: "name")
+    let fetchedResultsController = CoreDataManager.instance.fetchedResultsController(entityName: "Order", keyForSort: "date")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +20,14 @@ class ClientsTableViewController: UITableViewController, NSFetchedResultsControl
         } catch {
             fatalError("Failed to fetch entities: \(error)")
         }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func configCell(cell: UITableViewCell, order: Order) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, yyyy"
+        let nameOfClient = (order.client == nil) ? "-- Unknown --" : (order.client?.name)
+        cell.textLabel?.text = formatter.string(from: order.date!) + "\t" + nameOfClient!
+        
     }
     
     // MARK: - Make table updates
@@ -42,9 +44,9 @@ class ClientsTableViewController: UITableViewController, NSFetchedResultsControl
             }
         case .update:
             if let indexPath = indexPath {
-                let client = fetchedResultsController.object(at: indexPath) as! Client
+                let order = fetchedResultsController.object(at: indexPath) as! Order
                 let cell = tableView(tableView, cellForRowAt: indexPath)
-                cell.textLabel?.text = client.name
+                configCell(cell: cell, order: order)
             }
         case .delete:
             if let indexPath = indexPath {
@@ -86,30 +88,30 @@ class ClientsTableViewController: UITableViewController, NSFetchedResultsControl
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier2", for: indexPath)
         
-        let client = fetchedResultsController.object(at: indexPath) as! Client
-        cell.textLabel?.text = client.name
+        let order = fetchedResultsController.object(at: indexPath) as! Order
+        configCell(cell: cell, order: order)
 
         return cell
     }
 
-    @IBAction func AddClient(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "clientsToClient", sender: nil)
+    @IBAction func AddOrder(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "ordersToOrder", sender: nil)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let client = fetchedResultsController.object(at: indexPath) as? Client
-        performSegue(withIdentifier: "clientsToClient", sender: client)
+        let order = fetchedResultsController.object(at: indexPath) as? Order
+        performSegue(withIdentifier: "ordersToOrder", sender: order)
     }
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "clientsToClient" {
-            let controller = segue.destination as! ClientViewController
-            controller.client = sender as? Client
+        if segue.identifier == "ordersToOrder" {
+            let controller = segue.destination as! OrderViewController
+            controller.order = sender as? Order
         }
     }
 }

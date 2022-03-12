@@ -272,6 +272,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p5G-55-aS0">
                                 <rect key="frame" x="0.0" y="472" width="414" height="336"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseIdentifier3" id="OuY-Bm-Sag">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OuY-Bm-Sag" id="WXY-37-TSd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m53-DN-5Zl">
                                 <rect key="frame" x="313" y="427" width="81" height="31"/>
@@ -295,6 +305,7 @@
                             <constraint firstItem="2Th-sc-JQA" firstAttribute="leading" secondItem="nlD-TZ-EzU" secondAttribute="leading" id="GZj-UL-pX0"/>
                             <constraint firstItem="dyA-x9-GXE" firstAttribute="top" secondItem="I98-K4-opj" secondAttribute="bottom" constant="14" id="HTI-T9-PJf"/>
                             <constraint firstItem="p5G-55-aS0" firstAttribute="top" secondItem="dyA-x9-GXE" secondAttribute="bottom" constant="14" id="Lzs-Hs-fRP"/>
+                            <constraint firstItem="m53-DN-5Zl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nlD-TZ-EzU" secondAttribute="leading" symbolic="YES" id="Nsf-GM-zd3"/>
                             <constraint firstItem="I98-K4-opj" firstAttribute="leading" secondItem="nlD-TZ-EzU" secondAttribute="leading" constant="20" id="OfV-cO-tpt"/>
                             <constraint firstItem="nlD-TZ-EzU" firstAttribute="trailing" secondItem="dyA-x9-GXE" secondAttribute="trailing" constant="14" id="WEK-W0-GKt"/>
                             <constraint firstItem="MYp-ov-lj9" firstAttribute="leading" secondItem="awe-yy-pdA" secondAttribute="trailing" constant="8.5" id="WGB-So-xd2"/>
@@ -460,7 +471,7 @@
             <objects>
                 <tableViewController id="L0e-q6-xaa" customClass="ClientsTableViewController" customModule="JustTryingCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="qCQ-Na-XPk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -596,7 +607,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6fr-YV-Su0"/>
+        <segue reference="z4z-Zn-7sG"/>
         <segue reference="Zr8-Jp-L6p"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -105,20 +105,21 @@ class OrderViewController: UIViewController, NSFetchedResultsControllerDelegate,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let rowOfOrder = table?.object(at: indexPath) as! RowOfOrder
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier3", for: indexPath)
+        
         let nameOfService = (rowOfOrder.service == nil) ? "-- Unknown --" : (rowOfOrder.service?.name)
         cell.textLabel?.text = nameOfService! + " - " + String(rowOfOrder.sum)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let rowOfOrder = table?.object(at: indexPath) as? Client
+        let rowOfOrder = table?.object(at: indexPath) as? RowOfOrder
         performSegue(withIdentifier: "orderToRowOfOrder", sender: rowOfOrder)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let managedObject = table?.object(at: indexPath) as! RowOfOrder
+            let managedObject = table?.object(at: indexPath) as! NSManagedObject
             CoreDataManager.instance.persistentContainer.viewContext.delete(managedObject)
             CoreDataManager.instance.saveContext()
         }
@@ -146,11 +147,11 @@ class OrderViewController: UIViewController, NSFetchedResultsControllerDelegate,
                 tableView.deleteRows(at: [indexPath], with: .automatic)
             }
         case .move:
-            if let indexPath = newIndexPath {
-                tableView.insertRows(at: [indexPath], with: .automatic)
-            }
             if let indexPath = indexPath {
                 tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath], with: .automatic)
             }
         }
     }

@@ -12,7 +12,7 @@ struct Hero: Codable {
     let img: String
 }
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController {
     
     var heroes = [Hero]()
 
@@ -41,27 +41,6 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             
         }.resume()
     }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomCollectionViewCell
-        
-        cell.nameLabel.text = heroes[indexPath.row].localized_name.capitalized
-        
-        let defaultLink = "https://api.opendota.com"
-        let completeLink = defaultLink + heroes[indexPath.row].img
-        
-        cell.imageView.downloaded(from: completeLink)
-        // круглость
-        cell.clipsToBounds = true
-        cell.imageView.layer.cornerRadius = cell.imageView.frame.height / 2
-        cell.imageView.contentMode = .scaleAspectFill
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return heroes.count
-    }
 }
 
 extension UIImageView {
@@ -82,5 +61,31 @@ extension UIImageView {
     func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
+    }
+}
+
+extension ViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomCollectionViewCell
+        
+//        cell.nameLabel.text = heroes[indexPath.row].localized_name.capitalized
+//
+//        let defaultLink = "https://api.opendota.com"
+//        let completeLink = defaultLink + heroes[indexPath.row].img
+//
+//        cell.imageView.downloaded(from: completeLink)
+//        // круглость
+//        cell.clipsToBounds = true
+//        cell.imageView.layer.cornerRadius = cell.imageView.frame.height / 2
+//        cell.imageView.contentMode = .scaleAspectFill
+        
+        // вместо того что выше вызываем
+        cell.setupCell(hero: heroes[indexPath.row])
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return heroes.count
     }
 }

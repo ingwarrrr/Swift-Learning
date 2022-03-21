@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4pR-0B-aWv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Some date-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DatePickerForTextField" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,29 +30,119 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRi-1d-T26">
+                                <rect key="frame" x="100" y="531.5" width="214" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Afq-OB-CyP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Another DP">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showCountryDP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yc9-L6-2uP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WYD-Me-obn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="4zO-Vh-0te"/>
+                            <constraint firstItem="oRi-1d-T26" firstAttribute="top" secondItem="WYD-Me-obn" secondAttribute="bottom" constant="15" id="5Xr-nR-qJe"/>
                             <constraint firstItem="WYD-Me-obn" firstAttribute="top" secondItem="qRk-kO-8Y5" secondAttribute="bottom" constant="2" id="HID-EA-jSt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WYD-Me-obn" secondAttribute="trailing" constant="100" id="LPD-eq-HsU"/>
                             <constraint firstItem="WYD-Me-obn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Mkz-aa-816"/>
                             <constraint firstItem="qRk-kO-8Y5" firstAttribute="leading" secondItem="WYD-Me-obn" secondAttribute="leading" id="Qel-qK-VaY"/>
+                            <constraint firstItem="oRi-1d-T26" firstAttribute="trailing" secondItem="WYD-Me-obn" secondAttribute="trailing" id="Tdi-N1-oKm"/>
+                            <constraint firstItem="oRi-1d-T26" firstAttribute="leading" secondItem="WYD-Me-obn" secondAttribute="leading" id="bD2-ni-vAw"/>
                             <constraint firstItem="qRk-kO-8Y5" firstAttribute="trailing" secondItem="WYD-Me-obn" secondAttribute="trailing" id="nAq-dh-L8g"/>
                             <constraint firstItem="WYD-Me-obn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xmb-ES-fyH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Some date" id="vdX-Er-73T"/>
                     <connections>
                         <outlet property="someDateField" destination="WYD-Me-obn" id="R9m-ZE-DvT"/>
+                        <segue destination="wiB-XL-n9f" kind="show" identifier="showCountryDP" id="neN-da-Qof"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="52"/>
+            <point key="canvasLocation" x="886.95652173913049" y="51.5625"/>
+        </scene>
+        <!--Country-->
+        <scene sceneID="AB3-nb-kQ1">
+            <objects>
+                <viewController storyboardIdentifier="countryVC" id="wiB-XL-n9f" customClass="CountryDPViewController" customModule="DatePickerForTextField" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0lM-wI-Rr7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Japan" translatesAutoresizingMaskIntoConstraints="NO" id="hyR-qF-PdQ">
+                                <rect key="frame" x="20" y="108" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6rj-7U-k8k"/>
+                                    <constraint firstAttribute="height" constant="100" id="HCh-Jd-J5S"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Japan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="3hT-yI-2U9">
+                                <rect key="frame" x="20" y="216" width="100" height="34"/>
+                                <color key="backgroundColor" red="0.11372549019607843" green="0.67843137254901964" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVS-f1-P6p">
+                                <rect key="frame" x="120" y="88" width="294" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="8Uz-Ye-NbH"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FXx-Mp-5w7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oVS-f1-P6p" firstAttribute="top" secondItem="FXx-Mp-5w7" secondAttribute="top" id="11h-bz-X1a"/>
+                            <constraint firstItem="oVS-f1-P6p" firstAttribute="trailing" secondItem="FXx-Mp-5w7" secondAttribute="trailing" id="4gu-pS-bDl"/>
+                            <constraint firstItem="3hT-yI-2U9" firstAttribute="leading" secondItem="hyR-qF-PdQ" secondAttribute="leading" id="dhy-GD-f9s"/>
+                            <constraint firstItem="hyR-qF-PdQ" firstAttribute="leading" secondItem="FXx-Mp-5w7" secondAttribute="leading" constant="20" id="gNj-zb-lED"/>
+                            <constraint firstItem="3hT-yI-2U9" firstAttribute="top" secondItem="hyR-qF-PdQ" secondAttribute="bottom" constant="8" symbolic="YES" id="lng-ni-wEm"/>
+                            <constraint firstItem="3hT-yI-2U9" firstAttribute="trailing" secondItem="hyR-qF-PdQ" secondAttribute="trailing" id="nw0-VA-Mrg"/>
+                            <constraint firstItem="oVS-f1-P6p" firstAttribute="leading" secondItem="hyR-qF-PdQ" secondAttribute="trailing" id="qdv-hL-1h5"/>
+                            <constraint firstItem="hyR-qF-PdQ" firstAttribute="top" secondItem="FXx-Mp-5w7" secondAttribute="top" constant="20" id="zFd-mi-JFO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Country" id="4Wt-SX-IDt"/>
+                    <connections>
+                        <outlet property="chooseCountryPickerView" destination="oVS-f1-P6p" id="W9j-KH-nTe"/>
+                        <outlet property="countryImg" destination="hyR-qF-PdQ" id="nWR-Up-afc"/>
+                        <outlet property="countryLbl" destination="3hT-yI-2U9" id="JUe-YH-b8U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vFB-Up-2PD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.6231884057972" y="51.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bKR-Fc-jnu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4pR-0B-aWv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X3s-Ta-ZEO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Bjv-Tu-F1I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zoc-A7-8We" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="51.5625"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Japan" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -53,5 +53,16 @@ class ViewController: UIViewController {
         someDateField.text = dateFormatter.string(from: datePicker.date)
         view.endEditing(true)
     }
+    
+    @IBAction func showCountryDP(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let CountryVC = storyboard.instantiateViewController(withIdentifier: "countryVC")
+        
+        show(CountryVC, sender: self)
+//        CountryVC.modalPresentationStyle = .fullScreen
+//        CountryVC.modalTransitionStyle = .crossDissolve
+//        present(CountryVC, animated: true)
+        
+    }
 }
 

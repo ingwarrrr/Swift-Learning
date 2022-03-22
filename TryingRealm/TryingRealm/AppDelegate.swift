@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  firstProject
+//  TryingRealm
 //
-//  Created by Igor on 29.01.2022.
+//  Created by Igor on 22.03.2022.
 //
 
 import UIKit

@@ -26,7 +26,7 @@ class ViewController: UITableViewController {
                                                                    blue: 192/255,
                                                                    alpha: 1)
         // Цвет текста для кнопки
-        navigationController?.navigationBar.tintColor = .sys
+        navigationController?.navigationBar.tintColor = .systemBlue
         
         // Добавляем кнопку "Добавить" в навигейшин бар
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Добавить",

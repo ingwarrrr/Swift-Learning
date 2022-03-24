@@ -10,7 +10,7 @@ import RealmSwift
 
 class ViewController: UITableViewController {
     
-    let realm = try! Realm() // Доступ к хранилищу
+    //let realm = try! Realm() // Доступ к хранилищу
     
     var itemsArray: Results<TasksList>! // Массив для хранения записей
     var cellId = "Cell" // Идентификатор ячейки
@@ -39,6 +39,8 @@ class ViewController: UITableViewController {
         // Присваиваем ячейку для TableView с иднетифиактором "Cell"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         
+        
+        let realm = try! Realm()
         itemsArray = realm.objects(TasksList.self)
     }
     
@@ -71,9 +73,22 @@ class ViewController: UITableViewController {
             let task = TasksList()
             task.task = (alert.textFields?.first?.text)!
             //  добавление задачи в хранилище
-            try! self.realm.write({
-                self.realm.add(task)
-            })
+            
+            
+            DispatchQueue(label: "background").async {
+                do {
+                    let realm = try Realm()
+                    try realm.write({
+                        realm.add(task)
+                    })
+                } catch {
+                    NSLog("failde to open realm on backgound")
+                }
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
             
             self.tableView.reloadData()
         }
@@ -111,8 +126,10 @@ class ViewController: UITableViewController {
         
         let deleteAction = UIContextualAction(style: .normal, title: "Delete") { _,_,_  in
             // удаление строки
-            try! self.realm.write({
-                self.realm.delete(editingRow)
+            
+            let realm = try! Realm()
+            try! realm.write({
+                realm.delete(editingRow)
                 self.tableView.reloadData()
                 
             })

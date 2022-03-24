@@ -12,6 +12,7 @@
 		7807272A27EC01920085B87C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7807272927EC01920085B87C /* ViewController.swift */; };
 		7807272F27EC01930085B87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7807272E27EC01930085B87C /* Assets.xcassets */; };
 		7807273227EC01930085B87C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7807273027EC01930085B87C /* LaunchScreen.storyboard */; };
+		78F33DDF27ECB7A100716B10 /* TasksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F33DDE27ECB7A100716B10 /* TasksList.swift */; };
 		B1E01E72BF77FF24BE7CF682 /* Pods_TryingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F7BE054DDF492B0E848FBB /* Pods_TryingRealm.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		7807272E27EC01930085B87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7807273127EC01930085B87C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7807273327EC01940085B87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78F33DDE27ECB7A100716B10 /* TasksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksList.swift; sourceTree = "<group>"; };
 		D42C8843DF997BE67DE4054B /* Pods-TryingRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TryingRealm.debug.xcconfig"; path = "Target Support Files/Pods-TryingRealm/Pods-TryingRealm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 		7807272427EC01920085B87C /* TryingRealm */ = {
 			isa = PBXGroup;
 			children = (
+				78F33DDD27ECB78300716B10 /* Models */,
 				7807273927EC04710085B87C /* Base */,
 				7807272527EC01920085B87C /* AppDelegate.swift */,
 				7807272727EC01920085B87C /* SceneDelegate.swift */,
@@ -77,6 +80,14 @@
 				7807273027EC01930085B87C /* LaunchScreen.storyboard */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		78F33DDD27ECB78300716B10 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78F33DDE27ECB7A100716B10 /* TasksList.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E2E98C4D828F0AF4E42A77BA /* Pods */ = {
@@ -210,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F33DDF27ECB7A100716B10 /* TasksList.swift in Sources */,
 				7807272A27EC01920085B87C /* ViewController.swift in Sources */,
 				7807272627EC01920085B87C /* AppDelegate.swift in Sources */,
 				7807272827EC01920085B87C /* SceneDelegate.swift in Sources */,

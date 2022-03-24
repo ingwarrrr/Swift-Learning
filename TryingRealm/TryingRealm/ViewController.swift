@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UITableViewController {
     
-    var itemsArray = [String]() // Массив для хранения записей
+    let realm = try! Realm() // Доступ к хранилищу
+    
+    var itemsArray: Results<TasksList>! // Массив для хранения записей
     var cellId = "Cell" // Идентификатор ячейки
 
     override func viewDidLoad() {
@@ -18,7 +21,7 @@ class ViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        view.backgroundColor = .blue
+        view.backgroundColor = .lightGray
         
         // Цвет навигейшин бара
         navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 21/255,
@@ -26,7 +29,7 @@ class ViewController: UITableViewController {
                                                                    blue: 192/255,
                                                                    alpha: 1)
         // Цвет текста для кнопки
-        navigationController?.navigationBar.tintColor = .systemBlue
+        navigationController?.navigationBar.tintColor = .white
         
         // Добавляем кнопку "Добавить" в навигейшин бар
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Добавить",
@@ -35,6 +38,8 @@ class ViewController: UITableViewController {
                                                             action: #selector(addItem)) // Вызов метода для кнопки
         // Присваиваем ячейку для TableView с иднетифиактором "Cell"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        
+        itemsArray = realm.objects(TasksList.self)
     }
     
     // Действие при нажатии на кнопку "Добавить"
@@ -63,8 +68,12 @@ class ViewController: UITableViewController {
                 return
             }
             
-            // Добавляем в массив новую задачу из текстового поля
-            self.itemsArray.append((alert.textFields?.first?.text)!)
+            let task = TasksList()
+            task.task = (alert.textFields?.first?.text)!
+            //  добавление задачи в хранилище
+            try! self.realm.write({
+                self.realm.add(task)
+            })
             
             self.tableView.reloadData()
         }
@@ -81,13 +90,16 @@ class ViewController: UITableViewController {
     //MARK: Table View Data Source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemsArray.count
+        if itemsArray.count != 0 {
+            return itemsArray.count
+        }
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         let item = itemsArray[indexPath.row]
-        cell.textLabel?.text = item
+        cell.textLabel?.text = item.task
         return cell
     }
     
@@ -95,9 +107,15 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
+        let editingRow = itemsArray[indexPath.row]
+        
         let deleteAction = UIContextualAction(style: .normal, title: "Delete") { _,_,_  in
-            self.itemsArray.remove(at: indexPath.row)
-            tableView.reloadData()
+            // удаление строки
+            try! self.realm.write({
+                self.realm.delete(editingRow)
+                self.tableView.reloadData()
+                
+            })
         }
         
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])

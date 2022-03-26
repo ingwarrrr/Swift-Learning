@@ -26,7 +26,9 @@ class ViewController: UIViewController {
     private func setupTableView() {
         table.delegate = self
         table.dataSource = self
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        let nibCell = UINib(nibName: "TrackCell", bundle: nil)
+        table.register(nibCell, forCellReuseIdentifier: "trackCell")
     }
     
     private func setupSearchBar() {
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = music?.results.count {
@@ -47,13 +50,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell", for: indexPath) as! TrackCell
         let track = music?.results[indexPath.row]
-        cell.textLabel?.text = track?.trackName
+        
+        cell.setupCell(track: track)
+        
         return cell
     }
 }
 
+// MARK: - UISearchBarDelegate
 extension ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let urlString = "https://itunes.apple.com/search?term=\(searchText)&limit=25"

@@ -17,6 +17,8 @@ class PhotosCollectionViewController: UICollectionViewController {
         return UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(actiondBarButtonTapped))
     }()
     
+    var networkService = NetworkService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,10 +56,17 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     private func setupSearchBar() {
         let searchController = UISearchController(searchResultsController: nil)
+        // настройка серча
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.sizeToFit()
         searchController.obscuresBackgroundDuringPresentation = false
+        
+        // дерелат реализовает селф
+        searchController.searchBar.delegate = self
+        
         navigationItem.searchController = searchController
+    
+        // серч скрыт по умолчанию
         navigationItem.hidesSearchBarWhenScrolling = false
     }
     
@@ -71,5 +80,17 @@ class PhotosCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellId", for: indexPath)
         cell.backgroundColor = .red
         return cell
+    }
+}
+
+// MARK: - UI
+
+extension PhotosCollectionViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+        
+        networkService.request(searchTerm: searchText) { _ , _ in
+            print("awe")
+        }
     }
 }

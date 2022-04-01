@@ -14,6 +14,7 @@
 		785A183C27F75E84008E71C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785A183A27F75E84008E71C2 /* Main.storyboard */; };
 		785A183E27F75E89008E71C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785A183D27F75E89008E71C2 /* Assets.xcassets */; };
 		785A184127F75E89008E71C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785A183F27F75E89008E71C2 /* LaunchScreen.storyboard */; };
+		785A184C27F76C25008E71C2 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785A184B27F76C25008E71C2 /* VideoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		785A183D27F75E89008E71C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		785A184027F75E89008E71C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		785A184227F75E89008E71C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		785A184B27F76C25008E71C2 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,15 +65,32 @@
 		785A183327F75E84008E71C2 /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				785A184A27F76278008E71C2 /* Cells */,
+				785A183827F75E84008E71C2 /* ViewController.swift */,
+				785A184827F761F0008E71C2 /* Base */,
 				785A183427F75E84008E71C2 /* AppDelegate.swift */,
 				785A183627F75E84008E71C2 /* SceneDelegate.swift */,
-				785A183827F75E84008E71C2 /* ViewController.swift */,
-				785A183A27F75E84008E71C2 /* Main.storyboard */,
 				785A183D27F75E89008E71C2 /* Assets.xcassets */,
-				785A183F27F75E89008E71C2 /* LaunchScreen.storyboard */,
 				785A184227F75E89008E71C2 /* Info.plist */,
 			);
 			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		785A184827F761F0008E71C2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				785A183A27F75E84008E71C2 /* Main.storyboard */,
+				785A183F27F75E89008E71C2 /* LaunchScreen.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		785A184A27F76278008E71C2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				785A184B27F76C25008E71C2 /* VideoTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7F547006A04D9EB83FE8AF7F /* Pods */ = {
@@ -80,7 +99,6 @@
 				1B58979F5A01FF4C5390B5B6 /* Pods-VideoPlayer.debug.xcconfig */,
 				1AA91E2CB1B1DBFA3776EABC /* Pods-VideoPlayer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				785A183927F75E84008E71C2 /* ViewController.swift in Sources */,
+				785A184C27F76C25008E71C2 /* VideoTableViewCell.swift in Sources */,
 				785A183527F75E84008E71C2 /* AppDelegate.swift in Sources */,
 				785A183727F75E84008E71C2 /* SceneDelegate.swift in Sources */,
 			);

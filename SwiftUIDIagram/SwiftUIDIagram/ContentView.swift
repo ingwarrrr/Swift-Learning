@@ -24,6 +24,7 @@ struct ProgressShape: Shape {
 
 struct ContentView: View {
     
+    @State var showProfile = false
     @State var pickerItem = 0
     @State var diagramValues: [[CGFloat]] = [
             [30, 90, 160],
@@ -39,7 +40,16 @@ struct ContentView: View {
             Color(CGColor(red: 1, green: 160 / 255, blue: 145 / 255, alpha: 0.8))
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                Spacer(minLength: 100)
+                Button {
+                    self.showProfile.toggle()
+                } label: {
+                    Image("user")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 36, height: 36)
+                        .clipShape(Circle())
+                }
+
                 Text("Analitics")
                     .font(.system(size: 32))
                     .fontWeight(.heavy)
@@ -62,8 +72,15 @@ struct ContentView: View {
                     DiagramView(value: diagramValues[pickerItem][2])
                 }.padding(.top, 16)
                     .animation(.easeInOut(duration: 1))
-                Spacer(minLength: 170)
+                MenuProgress()
+                    .offset(y: showProfile ? 0 : 600)
+                    .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
             }
+            .scaleEffect(showProfile ? 0.9 : 1)
+            .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
+            .rotation3DEffect(Angle(degrees: showProfile ? -10 : 0), axis: (x: 0, y: 0, z: 0))
             
             /*
             ZStack {
@@ -113,7 +130,7 @@ struct DiagramView: View {
 //                    .foregroundColor(Color.red)
                     .foregroundColor(color)
             }.padding(.top, 16)
-            Text("03").padding(.top, 4)
+                .padding(.bottom, 32)
         }
     }
 }

@@ -19,6 +19,7 @@ class TasksStorage: TasksStorageProtocol {
             Task(title: "Помыть руки", type: .important, status: .planned),
             Task(title: "Отдать долг", type: .normal, status: .planned),
             Task(title: "Купить ноут", type: .normal, status: .planned),
+            Task(title: "Пригласить на вечеринку Макса,Пашу,Влада, Мишу", type: .normal, status: .planned),
             Task(title: "Продать сувенир", type: .important, status: .completed),
             Task(title: "Позвонить девушке", type: .normal, status: .completed),
             Task(title: "Позвонить супруге", type: .normal, status: .completed)

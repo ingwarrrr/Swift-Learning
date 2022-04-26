@@ -21,6 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let window = window else {
             return
         }
+        
+        // отключение темной темы
+        window.overrideUserInterfaceStyle = .light
 
         // загрузка списка задач
         // ее необходимо выполнить до создания экземпляра класса TaskListController

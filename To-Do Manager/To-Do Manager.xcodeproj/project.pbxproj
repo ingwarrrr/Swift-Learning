@@ -75,8 +75,8 @@
 				78C0500528142AD600708AFB /* AppDelegate.swift */,
 				78C0500728142AD600708AFB /* SceneDelegate.swift */,
 				78C0500B28142AD600708AFB /* Main.storyboard */,
-				78C0500E28142AD900708AFB /* Assets.xcassets */,
 				78C0501028142AD900708AFB /* LaunchScreen.storyboard */,
+				78C0500E28142AD900708AFB /* Assets.xcassets */,
 				78C0501328142AD900708AFB /* Info.plist */,
 			);
 			path = "To-Do Manager";

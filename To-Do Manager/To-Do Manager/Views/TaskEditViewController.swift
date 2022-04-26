@@ -10,12 +10,13 @@ import UIKit
 class TaskEditViewController: UITableViewController {
     @IBOutlet weak var taskTitle: UITextField!
     @IBOutlet weak var taskTypeLabel: UILabel!
+    @IBOutlet weak var taskStatusSwitch: UISwitch!
     
     // параметры задачи
     var taskText: String = ""
     var taskType: TaskPriority = .normal
     var taskStatus: TaskStatus = .planned
-    var duAfterEdit: ((String, TaskPriority, TaskStatus) -> Void)?
+    var doAfterEdit: ((String, TaskPriority, TaskStatus) -> Void)?
     // назване типов задач
     private var taskTitles: [TaskPriority: String] = [
         .important: "Важная",
@@ -29,8 +30,28 @@ class TaskEditViewController: UITableViewController {
         // обновление текстового поля с названием задачи и тд
         taskTitle.text = taskText
         taskTypeLabel.text = taskTitles[taskType]
+        // обновляем статус задачи
+        if taskStatus == .completed {
+            taskStatusSwitch.isOn = true
+        }
     }
 
+    @IBAction func saveTask(_ sender: UIBarButtonItem) {
+        guard let title = taskTitle.text, title.trimmingCharacters(in: .whitespaces) != "" else {
+            let alert = UIAlertController(title: "Некоректное имя задачи", message: "Введит данные не с пустым именем", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(alert, animated: true)
+            return
+        }
+        // получаем актуальные значения
+        let type = taskType
+        let status: TaskStatus = taskStatusSwitch.isOn ? .completed : .planned
+        // вызываем обработчик
+        doAfterEdit?(title, type, status)
+        // возвращаемся к предыдущему экрану
+        navigationController?.popViewController(animated: true)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

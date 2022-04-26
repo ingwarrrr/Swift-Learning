@@ -78,9 +78,6 @@
 				78C0500E28142AD900708AFB /* Assets.xcassets */,
 				78C0501028142AD900708AFB /* LaunchScreen.storyboard */,
 				78C0501328142AD900708AFB /* Info.plist */,
-				78C0501B2814568900708AFB /* TaskListController.swift */,
-				78EE1E6C281825BB00B6A21A /* TaskEditViewController.swift */,
-				78EE1E6E2818319B00B6A21A /* TaskTypeController.swift */,
 			);
 			path = "To-Do Manager";
 			sourceTree = "<group>";
@@ -97,6 +94,9 @@
 		78C050222814629600708AFB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				78EE1E6E2818319B00B6A21A /* TaskTypeController.swift */,
+				78EE1E6C281825BB00B6A21A /* TaskEditViewController.swift */,
+				78C0501B2814568900708AFB /* TaskListController.swift */,
 				78C05023281462A200708AFB /* Cells */,
 			);
 			path = Views;

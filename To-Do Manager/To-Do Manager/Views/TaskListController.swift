@@ -22,6 +22,13 @@ class TaskListController: UITableViewController {
                     return task1position < task2position
                 })
             }
+            
+            // сохранение задач
+            var savigArray: [TaskProtocol] = []
+            tasks.forEach { _, value in
+                savigArray += value
+            }
+            taskStorage.saveTasks(savigArray)
         }
     }
     // порядок отображения секций по типам
@@ -43,6 +50,18 @@ class TaskListController: UITableViewController {
         }
         
         taskStorage.loadTasks().forEach { task in
+            tasks[task.type]?.append(task)
+        }
+    }
+    
+    func setTtasks(_ tasksCollection: [TaskProtocol]) {
+        // подготовка колекции с задачами
+        // будем использовать только те задачи? для которых определена секция
+        sectionsTypesPosition.forEach { taskType in
+            tasks[taskType] = []
+        }
+        // загрузка и разбор задач из хранилища
+        tasksCollection.forEach { task in
             tasks[task.type]?.append(task)
         }
     }
@@ -174,18 +193,44 @@ class TaskListController: UITableViewController {
         guard let _ = tasks[taskType]?[indexPath.row] else {
             return nil
         }
-        // 2. Убеждаемся что задача является "выполнено"
-        guard tasks[taskType]?[indexPath.row].status == .completed else {
-            return nil
-        }
-        
+
         // создаем действие для изменения статуса
         let actionSwipeInstance = UIContextualAction(style: .normal, title: "Не выполнена") { _, _, _ in
             self.tasks[taskType]![indexPath.row].status = .planned
             self.tableView.reloadSections(IndexSet(arrayLiteral: indexPath.section), with: .automatic)
         }
+        
+        // действие для перехода к экрану редактирования
+        let actionEditInstance = UIContextualAction(style: .normal, title: "Изменить") { _, _, _ in
+            // загрузка сцены со SB
+            let editScreen = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TaskEditController") as! TaskEditViewController
+            // передача значений редактируемой задачи
+            editScreen.taskText = self.tasks[taskType]![indexPath.row].title
+            editScreen.taskType = self.tasks[taskType]![indexPath.row].type
+            editScreen.taskStatus = self.tasks[taskType]![indexPath.row].status
+            // передача обработчика для сохранения задачи
+            editScreen.doAfterEdit = { [unowned self] title, type, status in
+                let editedTask = Task(title: title, type: type, status: status)
+                tasks[taskType]![indexPath.row] = editedTask
+                tableView.reloadData()
+            }
+            // переход к экрану редактирования
+            self.navigationController?.pushViewController(editScreen, animated: true)
+        }
+        
+        actionEditInstance.backgroundColor = .darkGray
+        
+        // создаем объект описывающий доступные действия
+        // в зависимости от статуса задачи будет отображено 1 ил 2 действия
+        let actionsConfiguration: UISwipeActionsConfiguration
+        if tasks[taskType]![indexPath.row].status == .completed {
+            actionsConfiguration = UISwipeActionsConfiguration(actions: [actionSwipeInstance, actionEditInstance])
+        } else {
+            actionsConfiguration = UISwipeActionsConfiguration(actions: [actionEditInstance])
+        }
+        
         // возвращаем настроенный объект
-        return UISwipeActionsConfiguration(actions: [actionSwipeInstance])
+        return actionsConfiguration
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -224,9 +269,14 @@ class TaskListController: UITableViewController {
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toCreateScreen" {
+            let destination = segue.destination as! TaskEditViewController
+            destination.doAfterEdit = { [unowned self] title, type, status in
+                let newTask = Task(title: title, type: type, status: status)
+                tasks[type]?.append(newTask)
+                tableView.reloadData()
+            }
+        }
     }
 }

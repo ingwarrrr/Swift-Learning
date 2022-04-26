@@ -16,6 +16,10 @@
 		78C0501F2814599900708AFB /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C0501E2814599900708AFB /* Task.swift */; };
 		78C0502128145AEF00708AFB /* TaskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C0502028145AEF00708AFB /* TaskStorage.swift */; };
 		78C05025281462CE00708AFB /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C05024281462CE00708AFB /* TaskCell.swift */; };
+		78EE1E6D281825BB00B6A21A /* TaskEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EE1E6C281825BB00B6A21A /* TaskEditViewController.swift */; };
+		78EE1E6F2818319B00B6A21A /* TaskTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EE1E6E2818319B00B6A21A /* TaskTypeController.swift */; };
+		78EE1E72281832B200B6A21A /* TaskTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EE1E70281832B200B6A21A /* TaskTypeCell.swift */; };
+		78EE1E73281832B200B6A21A /* TaskTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78EE1E71281832B200B6A21A /* TaskTypeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		78C0501E2814599900708AFB /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		78C0502028145AEF00708AFB /* TaskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStorage.swift; sourceTree = "<group>"; };
 		78C05024281462CE00708AFB /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		78EE1E6C281825BB00B6A21A /* TaskEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditViewController.swift; sourceTree = "<group>"; };
+		78EE1E6E2818319B00B6A21A /* TaskTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTypeController.swift; sourceTree = "<group>"; };
+		78EE1E70281832B200B6A21A /* TaskTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTypeCell.swift; sourceTree = "<group>"; };
+		78EE1E71281832B200B6A21A /* TaskTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTypeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,8 @@
 				78C0501028142AD900708AFB /* LaunchScreen.storyboard */,
 				78C0501328142AD900708AFB /* Info.plist */,
 				78C0501B2814568900708AFB /* TaskListController.swift */,
+				78EE1E6C281825BB00B6A21A /* TaskEditViewController.swift */,
+				78EE1E6E2818319B00B6A21A /* TaskTypeController.swift */,
 			);
 			path = "To-Do Manager";
 			sourceTree = "<group>";
@@ -96,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				78C05024281462CE00708AFB /* TaskCell.swift */,
+				78EE1E70281832B200B6A21A /* TaskTypeCell.swift */,
+				78EE1E71281832B200B6A21A /* TaskTypeCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -160,6 +172,7 @@
 			files = (
 				78C0501228142AD900708AFB /* LaunchScreen.storyboard in Resources */,
 				78C0500F28142AD900708AFB /* Assets.xcassets in Resources */,
+				78EE1E73281832B200B6A21A /* TaskTypeCell.xib in Resources */,
 				78C0500D28142AD600708AFB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,11 +185,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				78C0500628142AD600708AFB /* AppDelegate.swift in Sources */,
+				78EE1E6D281825BB00B6A21A /* TaskEditViewController.swift in Sources */,
 				78C0501F2814599900708AFB /* Task.swift in Sources */,
 				78C0500828142AD600708AFB /* SceneDelegate.swift in Sources */,
+				78EE1E6F2818319B00B6A21A /* TaskTypeController.swift in Sources */,
 				78C0502128145AEF00708AFB /* TaskStorage.swift in Sources */,
 				78C05025281462CE00708AFB /* TaskCell.swift in Sources */,
 				78C0501C2814568900708AFB /* TaskListController.swift in Sources */,
+				78EE1E72281832B200B6A21A /* TaskTypeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

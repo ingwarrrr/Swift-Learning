@@ -224,6 +224,8 @@ class TaskListController: UITableViewController {
         return actionsConfiguration
     }
     
+    // MARK: - Edit mode
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let taskType = sectionsTypesPosition[indexPath.section]
         // удаляем задачу
@@ -242,8 +244,14 @@ class TaskListController: UITableViewController {
         // секция в которую происходит перемещение
         let taskTypeTo = sectionsTypesPosition[destinationIndexPath.section]
         
+        // проверка на попытку изменения позиции внутри секции
+        guard taskTypeTo != taskTypeFrom else {
+            tableView.reloadData()
+            return
+        }
+        
         // безопасно извлекаем задачу? тем самым копируем ее
-        guard let movedTask = tasks[taskTypeFrom]?[destinationIndexPath.row] else {
+        guard let movedTask = tasks[taskTypeFrom]?[sourceIndexPath.row] else {
             return
         }
         // удаляем задачу с места откуда она перенесена

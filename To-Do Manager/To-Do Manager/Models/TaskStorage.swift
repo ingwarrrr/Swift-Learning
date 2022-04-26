@@ -63,7 +63,7 @@ class TasksStorage: TasksStorageProtocol {
         tasks.forEach { task in
             var newElemForStorage: Dictionary<String, String> = [:]
             newElemForStorage[TaskKey.title.rawValue] = task.title
-            newElemForStorage[TaskKey.type.rawValue] = (task.type == .normal) ? "important" : "normal"
+            newElemForStorage[TaskKey.type.rawValue] = (task.type == .important) ? "important" : "normal"
             newElemForStorage[TaskKey.status.rawValue] = (task.status == .planned) ? "planned" : "completed"
             arrayForStorage.append(newElemForStorage)
         }

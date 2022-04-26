@@ -39,19 +39,8 @@ class TaskListController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadTasks()
         
         navigationItem.leftBarButtonItem = editButtonItem
-    }
-    
-    private func loadTasks() {
-        sectionsTypesPosition.forEach { taskType in
-            tasks[taskType] = []
-        }
-        
-        taskStorage.loadTasks().forEach { task in
-            tasks[task.type]?.append(task)
-        }
     }
     
     func setTtasks(_ tasksCollection: [TaskProtocol]) {
@@ -169,6 +158,8 @@ class TaskListController: UITableViewController {
         
         return title
     }
+    
+    // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let taskType = sectionsTypesPosition[indexPath.section]

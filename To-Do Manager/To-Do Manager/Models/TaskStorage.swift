@@ -39,22 +39,6 @@ class TasksStorage: TasksStorageProtocol {
             resultTasks.append(Task(title: title, type: type, status: status))
         }
         
-        let testTasks: [TaskProtocol] = [
-            Task(title: "Купить хлуб", type: .important, status: .planned),
-            Task(title: "Помыть руки", type: .important, status: .planned),
-            Task(title: "Отдать долг", type: .normal, status: .planned),
-            Task(title: "Купить ноут", type: .normal, status: .planned),
-            Task(title: "Пригласить на вечеринку Макса,Пашу,Влада, Мишу", type: .normal, status: .planned),
-            Task(title: "Продать сувенир", type: .important, status: .completed),
-            Task(title: "Позвонить девушке", type: .normal, status: .completed),
-            Task(title: "Позвонить супруге", type: .normal, status: .completed)
-
-        ]
-        
-        for task in testTasks {
-            resultTasks.append(task)
-        }
-        
         return resultTasks
     }
     

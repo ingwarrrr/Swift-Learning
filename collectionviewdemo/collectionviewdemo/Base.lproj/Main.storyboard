@@ -14,14 +14,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="collectionviewdemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="917"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-rh-xEX">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-rh-xEX">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="917"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pud-zP-6f0" userLabel="Chapter View">
-                                        <rect key="frame" x="0.0" y="-44" width="390" height="380"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="380"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHAPTER 1: 12 SECTIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eje-YQ-vsL">
                                                 <rect key="frame" x="20" y="50" width="350" height="21"/>
@@ -132,7 +132,7 @@
                                         </constraints>
                                     </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5c-Z9-Zbo">
-                                        <rect key="frame" x="0.0" y="336" width="390" height="524"/>
+                                        <rect key="frame" x="0.0" y="380" width="390" height="524"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="524" id="DQH-2C-F24"/>
                                         </constraints>
@@ -167,6 +167,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="Tab Bar/home" selectedImage="Tab Bar/home-active" id="I9G-8d-08A"/>
+                    <size key="freeformSize" width="390" height="1000"/>
                     <connections>
                         <outlet property="chapterCollectionView" destination="W1S-4P-MNU" id="66b-a6-H7T"/>
                         <outlet property="scrollView" destination="Mfp-rh-xEX" id="5XF-fK-jgM"/>
@@ -417,11 +418,11 @@
             <objects>
                 <viewController id="0wb-IU-ebm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XJo-5H-H6D">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="867"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDV-Us-mYd">
-                                <rect key="frame" x="0.0" y="20" width="390" height="741"/>
+                                <rect key="frame" x="0.0" y="20" width="390" height="847"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I83-jX-V6P" userLabel="Dialog View">
                                         <rect key="frame" x="20" y="20" width="350" height="680"/>
@@ -535,11 +536,33 @@
                                                             <constraint firstAttribute="height" constant="390" id="peL-Ye-cTM"/>
                                                         </constraints>
                                                     </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only made possible with your kind support. Thank you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjK-yJ-g6h">
+                                                        <rect key="frame" x="90" y="560" width="170" height="54"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="170" id="Xc3-Pe-6IR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nd8-W1-Qbi">
+                                                        <rect key="frame" x="90" y="629" width="170" height="35.666666666666629"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="170" id="Nf9-MU-7zd"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="More/twitter" title="@Iigori">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="0.10074620531094784" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.94117647058823528" green="0.95294117647058818" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="8fz-vM-iB8" firstAttribute="leading" secondItem="E90-h5-bC8" secondAttribute="leading" constant="20" id="ATW-tb-mfA"/>
+                                                    <constraint firstAttribute="bottom" secondItem="nd8-W1-Qbi" secondAttribute="bottom" constant="15.33" id="CGJ-qv-ptU"/>
                                                     <constraint firstItem="8fz-vM-iB8" firstAttribute="top" secondItem="2Nb-6n-5CE" secondAttribute="bottom" constant="8" id="Cxc-O6-HVG"/>
+                                                    <constraint firstItem="QjK-yJ-g6h" firstAttribute="centerX" secondItem="E90-h5-bC8" secondAttribute="centerX" id="DWR-pE-l8t"/>
                                                     <constraint firstAttribute="trailing" secondItem="8fz-vM-iB8" secondAttribute="trailing" constant="20" id="Efa-sO-tCz"/>
                                                     <constraint firstItem="2Nb-6n-5CE" firstAttribute="top" secondItem="E90-h5-bC8" secondAttribute="top" constant="20" id="F60-eh-IJS"/>
                                                     <constraint firstItem="t67-XE-50P" firstAttribute="top" secondItem="8fz-vM-iB8" secondAttribute="bottom" constant="20" id="Fsp-g8-K0h"/>
@@ -547,7 +570,15 @@
                                                     <constraint firstAttribute="height" constant="680" id="VrQ-g1-4LJ"/>
                                                     <constraint firstItem="2Nb-6n-5CE" firstAttribute="centerX" secondItem="E90-h5-bC8" secondAttribute="centerX" id="VyJ-4Y-R1E"/>
                                                     <constraint firstAttribute="trailing" secondItem="t67-XE-50P" secondAttribute="trailing" id="iaI-eN-exb"/>
+                                                    <constraint firstItem="nd8-W1-Qbi" firstAttribute="top" secondItem="QjK-yJ-g6h" secondAttribute="bottom" constant="15" id="jeT-5w-Fhf"/>
+                                                    <constraint firstItem="nd8-W1-Qbi" firstAttribute="centerX" secondItem="E90-h5-bC8" secondAttribute="centerX" id="nPW-Es-tOU"/>
+                                                    <constraint firstItem="QjK-yJ-g6h" firstAttribute="top" secondItem="t67-XE-50P" secondAttribute="bottom" constant="34" id="qjS-j0-EJO"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="CGJ-qv-ptU"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -581,6 +612,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="Tab Bar/more" selectedImage="Tab Bar/more-active" id="qKD-FY-5gw"/>
+                    <size key="freeformSize" width="390" height="950"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mn9-Lg-2GL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -790,7 +822,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3h-oh-d5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1689.2307692307693" y="381.75355450236964"/>
+            <point key="canvasLocation" x="917" y="478"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gBI-4E-sIF">
@@ -821,6 +853,7 @@
         <image name="More/info" width="36" height="36"/>
         <image name="More/logo" width="36" height="36"/>
         <image name="More/safari" width="36" height="36"/>
+        <image name="More/twitter" width="24" height="20"/>
         <image name="Placeholder/image-ring-1" width="70" height="70"/>
         <image name="Placeholder/image-ring-2" width="70" height="70"/>
         <image name="Placeholder/image-ring-3" width="70" height="70"/>

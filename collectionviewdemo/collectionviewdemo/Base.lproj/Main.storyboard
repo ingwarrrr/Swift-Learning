@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="collectionviewdemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-rh-xEX">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-rh-xEX">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pud-zP-6f0" userLabel="Chapter View">
@@ -166,7 +166,7 @@
                             <constraint firstItem="Mfp-rh-xEX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ptf-bj-zcb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="I9G-8d-08A"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Tab Bar/home" selectedImage="Tab Bar/home-active" id="I9G-8d-08A"/>
                     <connections>
                         <outlet property="chapterCollectionView" destination="W1S-4P-MNU" id="66b-a6-H7T"/>
                         <outlet property="scrollView" destination="Mfp-rh-xEX" id="5XF-fK-jgM"/>
@@ -338,7 +338,7 @@
             </objects>
             <point key="canvasLocation" x="1689.2307692307693" y="-146.44549763033174"/>
         </scene>
-        <!--Item-->
+        <!--Chapters-->
         <scene sceneID="rcd-Ue-kvk">
             <objects>
                 <viewController id="EgS-Ft-VKz" sceneMemberID="viewController">
@@ -348,13 +348,13 @@
                         <viewLayoutGuide key="safeArea" id="cek-uG-oHK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jzu-zV-fJF"/>
+                    <tabBarItem key="tabBarItem" title="Chapters" image="Tab Bar/chapters" selectedImage="Tab Bar/chapters-active" id="jzu-zV-fJF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fX2-nK-hZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2440" y="-146.44549763033174"/>
         </scene>
-        <!--Item-->
+        <!--Bookmarks-->
         <scene sceneID="HCZ-vY-fxH">
             <objects>
                 <tableViewController id="CvP-9M-wv8" sceneMemberID="viewController">
@@ -377,13 +377,13 @@
                             <outlet property="delegate" destination="CvP-9M-wv8" id="CuH-Wh-JJr"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="0Rh-95-UJB"/>
+                    <tabBarItem key="tabBarItem" title="Bookmarks" image="Tab Bar/bookmarks" selectedImage="Tab Bar/bookmarks-active" id="0Rh-95-UJB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAM-72-FDx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3186.1538461538462" y="-146.44549763033174"/>
         </scene>
-        <!--Item-->
+        <!--Exercises-->
         <scene sceneID="wfv-H8-BBA">
             <objects>
                 <tableViewController id="Xh3-g3-IFJ" sceneMemberID="viewController">
@@ -406,13 +406,13 @@
                             <outlet property="delegate" destination="Xh3-g3-IFJ" id="cO2-3Q-kIZ"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="JGb-iB-TUc"/>
+                    <tabBarItem key="tabBarItem" title="Exercises" image="Tab Bar/exercises" selectedImage="Tab Bar/exercises-active" id="JGb-iB-TUc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbo-iS-IMU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3930.7692307692305" y="-146.44549763033174"/>
         </scene>
-        <!--Item-->
+        <!--More-->
         <scene sceneID="Uqf-E5-1s4">
             <objects>
                 <viewController id="0wb-IU-ebm" sceneMemberID="viewController">
@@ -422,7 +422,7 @@
                         <viewLayoutGuide key="safeArea" id="Net-QP-rBB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="qKD-FY-5gw"/>
+                    <tabBarItem key="tabBarItem" title="More" image="Tab Bar/more" selectedImage="Tab Bar/more-active" id="qKD-FY-5gw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mn9-Lg-2GL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -463,7 +463,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="304" height="235"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some text texttext text text text text text text text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKS-hn-sx2">
-                                                                    <rect key="frame" x="44.333333333333329" y="20" width="239.66666666666669" height="20"/>
+                                                                    <rect key="frame" x="40" y="20" width="244" height="48"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -476,10 +476,10 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="quote.closing" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nhk-Vd-09b">
-                                                                    <rect key="frame" x="285" y="34.333333333333329" width="12" height="2.3333333333333357"/>
+                                                                    <rect key="frame" x="274" y="53.333333333333329" width="23" height="11.333333333333329"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="9" id="FeO-1G-991"/>
-                                                                        <constraint firstAttribute="width" constant="12" id="LSW-pj-x3o"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="FeO-1G-991"/>
+                                                                        <constraint firstAttribute="width" constant="23" id="LSW-pj-x3o"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="auY-6Q-iOI">
@@ -516,6 +516,7 @@
                                                             <constraints>
                                                                 <constraint firstItem="WKS-hn-sx2" firstAttribute="top" secondItem="ECC-en-G7a" secondAttribute="top" constant="20" id="2RB-5f-Ll3"/>
                                                                 <constraint firstItem="jya-UU-g8G" firstAttribute="centerY" secondItem="auY-6Q-iOI" secondAttribute="centerY" id="AhN-c0-jYC"/>
+                                                                <constraint firstItem="WKS-hn-sx2" firstAttribute="leading" secondItem="5tL-AU-EcR" secondAttribute="trailing" constant="1" id="Mzl-ls-bt8"/>
                                                                 <constraint firstAttribute="bottom" secondItem="auY-6Q-iOI" secondAttribute="bottom" constant="14" id="R0W-Y7-vOi"/>
                                                                 <constraint firstAttribute="trailing" secondItem="WKS-hn-sx2" secondAttribute="trailing" constant="20" id="Ra7-Kl-bL9"/>
                                                                 <constraint firstItem="auY-6Q-iOI" firstAttribute="leading" secondItem="ECC-en-G7a" secondAttribute="leading" constant="54" id="beM-27-lYF"/>
@@ -524,8 +525,6 @@
                                                                 <constraint firstAttribute="trailing" secondItem="auY-6Q-iOI" secondAttribute="trailing" constant="20" id="lGQ-Bi-5Iq"/>
                                                                 <constraint firstItem="nhk-Vd-09b" firstAttribute="bottom" secondItem="WKS-hn-sx2" secondAttribute="bottom" id="r5G-Ue-imJ"/>
                                                                 <constraint firstItem="5tL-AU-EcR" firstAttribute="top" secondItem="ECC-en-G7a" secondAttribute="top" constant="20" id="shD-th-KYo"/>
-                                                                <constraint firstAttribute="bottom" secondItem="WKS-hn-sx2" secondAttribute="bottom" constant="195" id="v6g-iR-8OY"/>
-                                                                <constraint firstItem="WKS-hn-sx2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ECC-en-G7a" secondAttribute="leading" symbolic="YES" id="vFu-uu-gie"/>
                                                                 <constraint firstItem="auY-6Q-iOI" firstAttribute="leading" secondItem="jya-UU-g8G" secondAttribute="trailing" constant="10" id="zHG-04-O4l"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
@@ -658,6 +657,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Tab Bar/bookmarks" width="20" height="26"/>
+        <image name="Tab Bar/bookmarks-active" width="20" height="26"/>
+        <image name="Tab Bar/chapters" width="28" height="24"/>
+        <image name="Tab Bar/chapters-active" width="28" height="24"/>
+        <image name="Tab Bar/exercises" width="30" height="24"/>
+        <image name="Tab Bar/exercises-active" width="30" height="24"/>
+        <image name="Tab Bar/home" width="24" height="25"/>
+        <image name="Tab Bar/home-active" width="24" height="25"/>
+        <image name="Tab Bar/more" width="30" height="8"/>
+        <image name="Tab Bar/more-active" width="30" height="8"/>
         <image name="applelogo" catalog="system" width="103" height="128"/>
         <image name="ios11" width="2880" height="1600"/>
         <image name="logo.playstation" catalog="system" width="128" height="92"/>

@@ -1,53 +1,24 @@
 //
-//  ViewController.swift
+//  ChaptersViewController.swift
 //  collectionviewdemo
 //
-//  Created by Igor on 08.05.2022.
+//  Created by Igor on 02.06.2022.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var chapterCollectionView: UICollectionView!
+class ChaptersViewController: UIViewController {
+    @IBOutlet weak var chapter1CollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let rightItem = UIBarButtonItem(title: "Login", style: .done, target: nil, action: nil)
-        navigationItem.rightBarButtonItem = rightItem
-        let leftItem = UIBarButtonItem(image: UIImage(named: "More/logo"), style: .done, target: nil, action: nil)
-        navigationItem.leftBarButtonItem = leftItem
-        
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        
-        chapterCollectionView.delegate = self
-        chapterCollectionView.dataSource = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.isOpaque = false
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 50)
-        ]
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "HomeToSection" {
-            let toViewController = segue.destination as! SectionViewController
-            let indexPath = sender as! IndexPath
-            let section = sections[indexPath.row]
-            toViewController.section = section
-            toViewController.sections = sections
-            toViewController.indexPath = indexPath
-        }
+        chapter1CollectionView.delegate = self
+        chapter1CollectionView.dataSource = self
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
+extension ChaptersViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sections.count
     }
@@ -63,13 +34,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "HomeToSection", sender: indexPath)
-    }
 }
 
-extension HomeViewController: UIScrollViewDelegate {
+extension ChaptersViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         
@@ -110,5 +77,6 @@ extension HomeViewController: UIScrollViewDelegate {
         let scale = CATransform3DScale(CATransform3DIdentity, scaleFromX, scaleFromX, 1)
         
         return CATransform3DConcat(rotation, scale)
+
     }
 }

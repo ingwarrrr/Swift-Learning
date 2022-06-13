@@ -11,6 +11,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var chapterCollectionView: UICollectionView!
     
+    let presentSectionViewController = PresentSectionViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,12 +38,22 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "HomeToSection" {
-            let toViewController = segue.destination as! SectionViewController
+            
+            let destination = segue.destination as! SectionViewController
             let indexPath = sender as! IndexPath
             let section = sections[indexPath.row]
-            toViewController.section = section
-            toViewController.sections = sections
-            toViewController.indexPath = indexPath
+            
+            destination.section = section
+            destination.sections = sections
+            destination.indexPath = indexPath
+//          MARK: - не работает
+//            destination.transitioningDelegate = self
+
+            let attributes = chapterCollectionView.layoutAttributesForItem(at: indexPath)!
+            let cellFrame = chapterCollectionView.convert(attributes.frame, to: view)
+
+            presentSectionViewController.cellFrame = cellFrame
+            presentSectionViewController.cellTransform = animateCell(cellFrame: cellFrame)
         }
     }
 }
@@ -110,5 +122,17 @@ extension HomeViewController: UIScrollViewDelegate {
         let scale = CATransform3DScale(CATransform3DIdentity, scaleFromX, scaleFromX, 1)
         
         return CATransform3DConcat(rotation, scale)
+    }
+}
+
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return presentSectionViewController
+    }
+}
+
+extension UIViewController {
+    @IBAction public func unwindToViewController(_ segue: UIStoryboardSegue) {
+        dismiss(animated: true)
     }
 }

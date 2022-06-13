@@ -37,6 +37,15 @@ class BookmarsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+//        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "Bookmarks to Section", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Bookmarks to Section", let destionation = segue.destination as? SectionViewController {
+            destionation.section = sections[0]
+            destionation.sections = sections
+            destionation.indexPath = sender as? IndexPath
+        }
     }
 }

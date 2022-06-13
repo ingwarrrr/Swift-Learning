@@ -18,6 +18,7 @@
 		78163969282BD3EF00190846 /* TestimonialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78163968282BD3EF00190846 /* TestimonialViewController.swift */; };
 		7816396B282BD40E00190846 /* TestimonialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7816396A282BD40E00190846 /* TestimonialCollectionViewCell.swift */; };
 		7825C633284891C900FB36E8 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825C632284891C900FB36E8 /* ChaptersViewController.swift */; };
+		782FFCED28534DC6007F2B6E /* PresentSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782FFCEC28534DC5007F2B6E /* PresentSectionViewController.swift */; };
 		788E549B284E4DAE00F8EDB4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788E549A284E4DAE00F8EDB4 /* WebViewController.swift */; };
 		788E549D284E513100F8EDB4 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788E549C284E513100F8EDB4 /* MoreViewController.swift */; };
 		78D97D83282CE05200122A7A /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D97D82282CE05200122A7A /* SectionViewController.swift */; };
@@ -39,6 +40,7 @@
 		78163968282BD3EF00190846 /* TestimonialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialViewController.swift; sourceTree = "<group>"; };
 		7816396A282BD40E00190846 /* TestimonialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialCollectionViewCell.swift; sourceTree = "<group>"; };
 		7825C632284891C900FB36E8 /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
+		782FFCEC28534DC5007F2B6E /* PresentSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSectionViewController.swift; sourceTree = "<group>"; };
 		788E549A284E4DAE00F8EDB4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		788E549C284E513100F8EDB4 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		78D97D82282CE05200122A7A /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				7806D37728276D0E00B38A0F /* SceneDelegate.swift */,
 				7806D37928276D0E00B38A0F /* HomeViewController.swift */,
 				7806D37B28276D0E00B38A0F /* Main.storyboard */,
+				782FFCEC28534DC5007F2B6E /* PresentSectionViewController.swift */,
 				788E549C284E513100F8EDB4 /* MoreViewController.swift */,
 				788E549A284E4DAE00F8EDB4 /* WebViewController.swift */,
 				78DFC953284BAE4E00D27950 /* BookmarkTableViewCell.swift */,
@@ -176,6 +179,7 @@
 				78DFC954284BAE4E00D27950 /* BookmarkTableViewCell.swift in Sources */,
 				78163969282BD3EF00190846 /* TestimonialViewController.swift in Sources */,
 				7806D37628276D0E00B38A0F /* AppDelegate.swift in Sources */,
+				782FFCED28534DC6007F2B6E /* PresentSectionViewController.swift in Sources */,
 				788E549B284E4DAE00F8EDB4 /* WebViewController.swift in Sources */,
 				7806D38A28278CF200B38A0F /* SectionCollectionViewCell.swift in Sources */,
 				7816396B282BD40E00190846 /* TestimonialCollectionViewCell.swift in Sources */,

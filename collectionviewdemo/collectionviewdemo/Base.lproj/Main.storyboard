@@ -291,7 +291,7 @@
                                             <constraint firstAttribute="trailing" secondItem="VOo-6r-hhA" secondAttribute="trailing" constant="106" id="UZM-Zi-ED1"/>
                                             <constraint firstAttribute="trailing" secondItem="157-K2-A9U" secondAttribute="trailing" constant="108" id="X59-fU-As4"/>
                                             <constraint firstAttribute="bottom" secondItem="VOo-6r-hhA" secondAttribute="bottom" constant="30" id="Z3W-0Q-7LS"/>
-                                            <constraint firstAttribute="height" constant="420" id="a0W-dM-1ch"/>
+                                            <constraint firstAttribute="height" priority="999" constant="420" id="a0W-dM-1ch"/>
                                             <constraint firstAttribute="bottom" secondItem="LYG-iB-fMW" secondAttribute="bottom" id="cIx-Xy-9nx"/>
                                             <constraint firstItem="2rv-G5-e8r" firstAttribute="top" secondItem="cVa-vQ-G4X" secondAttribute="top" constant="20" id="ktS-5Z-QJ1"/>
                                             <constraint firstItem="2rv-G5-e8r" firstAttribute="leading" secondItem="cVa-vQ-G4X" secondAttribute="leading" constant="20" id="tpA-pk-laY"/>
@@ -305,6 +305,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="mb6-JE-p4Z" firstAttribute="leading" secondItem="cFM-qQ-JrJ" secondAttribute="leading" constant="20" id="A9w-co-sDb"/>
                                     <constraint firstItem="cVa-vQ-G4X" firstAttribute="leading" secondItem="IOD-ZY-fUW" secondAttribute="leading" id="RDW-cb-gcj"/>
@@ -331,7 +332,7 @@
                                                 <color key="baseForegroundColor" red="0.68627450980000004" green="0.2784313725" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                             </buttonConfiguration>
                                             <connections>
-                                                <action selector="closeButtonTapped:" destination="Lei-kp-TG5" eventType="touchUpInside" id="McH-xm-IDb"/>
+                                                <segue destination="dTH-M4-Bgs" kind="unwind" unwindAction="unwindToViewController:" id="EKl-lG-FjY"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -355,7 +356,6 @@
                             </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lkh-aG-3Vy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Z3n-aD-hz8" secondAttribute="trailing" constant="20" id="1I1-lI-Rtc"/>
                             <constraint firstItem="Z3n-aD-hz8" firstAttribute="top" secondItem="scr-lB-yKp" secondAttribute="top" constant="20" id="5Hk-LE-q1U"/>
@@ -365,15 +365,21 @@
                             <constraint firstItem="gzN-5c-hrd" firstAttribute="centerX" secondItem="scr-lB-yKp" secondAttribute="centerX" id="uel-h1-m2J"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ZAD-L1-L1P"/>
                     <connections>
                         <outlet property="bodyLabel" destination="mb6-JE-p4Z" id="5ls-ts-HSm"/>
                         <outlet property="captionLabel" destination="VOo-6r-hhA" id="jJd-TV-1un"/>
+                        <outlet property="closeVisualEffectView" destination="Z3n-aD-hz8" id="lNW-nA-w90"/>
+                        <outlet property="coverImage" destination="cVa-vQ-G4X" id="w8W-wl-QeT"/>
                         <outlet property="coverImageView" destination="LYG-iB-fMW" id="42O-4P-KIU"/>
                         <outlet property="progressLabel" destination="Atf-ob-pz9" id="aeW-QC-aL7"/>
+                        <outlet property="scrollView" destination="gzN-5c-hrd" id="z8X-Eb-QeL"/>
+                        <outlet property="subheadVisualEffectView" destination="2rv-G5-e8r" id="z7j-aY-hqm"/>
                         <outlet property="titileLabel" destination="157-K2-A9U" id="yTw-9D-zfB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gfd-se-0Nn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="dTH-M4-Bgs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2618.4615384615386" y="-146.44549763033174"/>
         </scene>
@@ -626,6 +632,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bookmarks" id="xOg-Dh-R82"/>
+                    <connections>
+                        <segue destination="Lei-kp-TG5" kind="presentation" identifier="Bookmarks to Section" id="fFn-zR-gG3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAM-72-FDx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1352,6 +1361,9 @@
             <point key="canvasLocation" x="8347.6923076923067" y="-146.44549763033174"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="sgV-vU-o37"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Bookmarks/code" width="44" height="44"/>
         <image name="More/ambience" width="36" height="36"/>

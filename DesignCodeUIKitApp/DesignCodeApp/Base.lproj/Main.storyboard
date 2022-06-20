@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZnN-po-iqO">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -79,7 +79,7 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="EdN-V6-l37">
-                                                            <rect key="frame" x="-37" y="20" width="450" height="88"/>
+                                                            <rect key="frame" x="38" y="20" width="300" height="88"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="emT-z9-YSk">
                                                                     <rect key="frame" x="0.0" y="0.0" width="130" height="88"/>
@@ -121,7 +121,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="EFe-sh-hV1">
-                                                                    <rect key="frame" x="160" y="0.0" width="130" height="88"/>
+                                                                    <rect key="frame" x="170" y="0.0" width="130" height="88"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEARCH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytV-WD-EoU">
                                                                             <rect key="frame" x="0.0" y="0.0" width="60.5" height="18"/>
@@ -158,6 +158,7 @@
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Deb-Q7-0Da">
                                                                     <rect key="frame" x="320" y="0.0" width="130" height="88"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOWNLOAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p23-rP-f2d">
                                                                             <rect key="frame" x="0.0" y="0.0" width="87.5" height="18"/>
@@ -504,17 +505,17 @@ design and code an iOS 11 app.</string>
             <objects>
                 <viewController id="nsI-yr-qkg" customClass="SectionViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YLS-F7-7US">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="8Tp-uJ-rgc">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcr-Kj-NHu">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="420"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="420"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ios11" translatesAutoresizingMaskIntoConstraints="NO" id="09w-Ro-VaS">
-                                                <rect key="frame" x="0.0" y="0.0" width="768" height="420"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="420"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn iOS 11 Design" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53d-cJ-5hX">
                                                 <rect key="frame" x="20" y="66" width="264" height="39"/>
@@ -580,7 +581,7 @@ design and code an iOS 11 app.</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Three years ago Apple…" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPo-8O-JMb">
-                                        <rect key="frame" x="20" y="450" width="728" height="23"/>
+                                        <rect key="frame" x="20" y="450" width="335" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -600,7 +601,7 @@ design and code an iOS 11 app.</string>
                                 <viewLayoutGuide key="safeArea" id="ZJd-el-FmB"/>
                             </scrollView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72z-S5-LyH">
-                                <rect key="frame" x="712" y="20" width="36" height="36"/>
+                                <rect key="frame" x="319" y="20" width="36" height="36"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8ib-B5-089">
                                     <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -664,23 +665,23 @@ design and code an iOS 11 app.</string>
             <objects>
                 <viewController id="FfD-fq-2Xe" customClass="ChaptersViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sd3-Br-fLM">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLH-am-pbl">
-                                <rect key="frame" x="0.0" y="116" width="768" height="859"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uv3-uV-VP0" userLabel="Chapter View">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="380"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHAPTER 1: 12 SECTIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlF-NM-IHs">
-                                                <rect key="frame" x="20" y="50" width="728" height="18"/>
+                                                <rect key="frame" x="20" y="50" width="335" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vam-mC-134">
-                                                <rect key="frame" x="0.0" y="82" width="768" height="248"/>
+                                                <rect key="frame" x="0.0" y="82" width="375" height="248"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="248" id="SbL-XE-vDo"/>
@@ -830,26 +831,26 @@ design and code an iOS 11 app.</string>
             <objects>
                 <tableViewController id="j04-De-2Wy" customClass="BookmarksTableViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dHB-uN-7h3">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookmarkCell" rowHeight="125" id="NBF-Vh-hDI" customClass="BookmarkTableViewCell" customModule="DesignCodeApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="768" height="125"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NBF-Vh-hDI" id="7gb-VA-Um7">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="124.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bookmarks/code" translatesAutoresizingMaskIntoConstraints="NO" id="Ia8-Ne-1WQ">
-                                            <rect key="frame" x="20" y="20" width="44" height="44"/>
+                                            <rect key="frame" x="16" y="20" width="44" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="44" id="aaC-yp-Yyf"/>
                                                 <constraint firstAttribute="height" constant="44" id="gjl-i0-fPO"/>
                                             </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoN-gu-jVB">
-                                            <rect key="frame" x="51" y="20" width="18" height="18"/>
+                                            <rect key="frame" x="47" y="20" width="18" height="18"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcO-Z8-30J">
                                                     <rect key="frame" x="5.5" y="0.5" width="7.5" height="18"/>
@@ -872,21 +873,21 @@ design and code an iOS 11 app.</string>
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4nc-iC-377">
-                                            <rect key="frame" x="77" y="20" width="671" height="86"/>
+                                            <rect key="frame" x="73" y="20" width="286" height="86"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECTION NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfi-j4-sYY">
-                                                    <rect key="frame" x="0.0" y="0.0" width="671" height="18"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="286" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aL8-SD-Z6O">
-                                                    <rect key="frame" x="0.0" y="18" width="671" height="24"/>
+                                                    <rect key="frame" x="0.0" y="18" width="286" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Content — More than ever, iOS 11 is going back to its roots. Bold fonts are everywhere" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5o-je-XLd">
-                                                    <rect key="frame" x="0.0" y="42" width="671" height="44"/>
+                                                    <rect key="frame" x="0.0" y="42" width="286" height="44"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -934,22 +935,22 @@ design and code an iOS 11 app.</string>
             <objects>
                 <viewController id="hcA-qU-OpM" userLabel="Purchase" customClass="PurchaseViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O8Q-ht-FDj">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BqG-mi-Hk3">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ghb-7j-AJq">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fv0-ch-lEX">
-                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nr9-nB-uex">
-                                        <rect key="frame" x="134" y="848" width="500" height="100"/>
+                                        <rect key="frame" x="20" y="669.5" width="335" height="150"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -964,41 +965,51 @@ design and code an iOS 11 app.</string>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recurring billing, cancel anytime." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-Wg-umc">
-                                        <rect key="frame" x="134" y="817" width="500" height="20.5"/>
+                                        <rect key="frame" x="20" y="638.5" width="335" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AzV-yh-QJA" userLabel="Dialog View">
-                                        <rect key="frame" x="134" y="202" width="500" height="600"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AzV-yh-QJA" userLabel="Dialog View" customClass="DesignableView" customModule="Spring">
+                                        <rect key="frame" x="20" y="23.5" width="335" height="600"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nC-pA-5Qm" userLabel="Inner View">
-                                                <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="600"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalCompressionResistancePriority="249" image="Background/Purchase" translatesAutoresizingMaskIntoConstraints="NO" id="LKa-V4-KIi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="600"/>
                                                     </imageView>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocb-FS-N1A" userLabel="Layout Guide">
-                                                        <rect key="frame" x="100" y="0.0" width="300" height="600"/>
+                                                        <rect key="frame" x="17.5" y="0.0" width="300" height="600"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="CWR-Z6-Erm"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get the entire book," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fq-zn-vIJ">
-                                                        <rect key="frame" x="100" y="20" width="300" height="29"/>
+                                                        <rect key="frame" x="17.5" y="20" width="300" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="plus, 20% off Sketch. More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzh-hO-1Vk">
-                                                        <rect key="frame" x="100" y="54" width="300" height="29"/>
+                                                        <rect key="frame" x="17.5" y="54" width="300" height="29"/>
+                                                        <gestureRecognizers/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                         <color key="textColor" red="0.96078431369999995" green="0.83921568629999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJX-Dx-u6r">
+                                                        <rect key="frame" x="17.5" y="54" width="300" height="29"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="29" id="g40-7l-V31"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <segue destination="Uh2-Vq-STs" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="X8E-uO-OAL"/>
+                                                        </connections>
+                                                    </button>
                                                     <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="628-NJ-JKB">
-                                                        <rect key="frame" x="100" y="103" width="300" height="132"/>
+                                                        <rect key="frame" x="17.5" y="103" width="300" height="132"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="l1d-BA-Jlo">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="132"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1079,9 +1090,9 @@ design and code an iOS 11 app.</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </visualEffectView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DjQ-AG-WeU">
-                                                        <rect key="frame" x="100" y="255" width="300" height="288"/>
+                                                        <rect key="frame" x="17.5" y="255" width="300" height="288"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7X-gp-brU">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7X-gp-brU" customClass="DesignableView" customModule="Spring">
                                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="88"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nqP-vE-Ihr">
@@ -1156,9 +1167,21 @@ design and code an iOS 11 app.</string>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                         <real key="value" value="14"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="14"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                        <real key="value" value="20"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                                        <real key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                        <real key="value" value="0.5"/>
+                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IC-Ut-6Ov">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IC-Ut-6Ov" customClass="DesignableView" customModule="Spring">
                                                                 <rect key="frame" x="0.0" y="100" width="300" height="88"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="JjS-fe-tya">
@@ -1231,9 +1254,21 @@ design and code an iOS 11 app.</string>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                         <real key="value" value="14"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="14"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                        <real key="value" value="20"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                                        <real key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                        <real key="value" value="0.5"/>
+                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vow-dw-iD3">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vow-dw-iD3" customClass="DesignableView" customModule="Spring">
                                                                 <rect key="frame" x="0.0" y="200" width="300" height="88"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="HAk-2t-Z9M">
@@ -1306,12 +1341,24 @@ design and code an iOS 11 app.</string>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                         <real key="value" value="14"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="14"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                        <real key="value" value="20"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                                        <real key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                        <real key="value" value="0.5"/>
+                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jni-q3-Xwo">
-                                                        <rect key="frame" x="180" y="555" width="141" height="33"/>
+                                                        <rect key="frame" x="97.5" y="555" width="141" height="33"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <state key="normal" title="Restore Purchase">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1322,12 +1369,15 @@ design and code an iOS 11 app.</string>
                                                 <constraints>
                                                     <constraint firstItem="DjQ-AG-WeU" firstAttribute="trailing" secondItem="ocb-FS-N1A" secondAttribute="trailing" id="1i1-rm-K6i"/>
                                                     <constraint firstItem="LKa-V4-KIi" firstAttribute="top" secondItem="6nC-pA-5Qm" secondAttribute="top" id="2Ad-J1-1Cg"/>
+                                                    <constraint firstItem="sJX-Dx-u6r" firstAttribute="bottom" secondItem="Wzh-hO-1Vk" secondAttribute="bottom" id="8Uq-A4-9OB"/>
                                                     <constraint firstItem="0Fq-zn-vIJ" firstAttribute="top" secondItem="ocb-FS-N1A" secondAttribute="top" constant="20" id="8sG-Y1-jt1"/>
                                                     <constraint firstAttribute="trailing" secondItem="LKa-V4-KIi" secondAttribute="trailing" id="Bcl-xf-72U"/>
                                                     <constraint firstItem="jni-q3-Xwo" firstAttribute="top" secondItem="DjQ-AG-WeU" secondAttribute="bottom" constant="12" id="CyV-6e-mdV"/>
                                                     <constraint firstItem="ocb-FS-N1A" firstAttribute="top" secondItem="6nC-pA-5Qm" secondAttribute="top" id="LND-jY-osw"/>
                                                     <constraint firstAttribute="bottom" secondItem="LKa-V4-KIi" secondAttribute="bottom" id="MPa-H9-Gc5"/>
                                                     <constraint firstItem="LKa-V4-KIi" firstAttribute="leading" secondItem="6nC-pA-5Qm" secondAttribute="leading" id="Q7D-pe-hfQ"/>
+                                                    <constraint firstItem="sJX-Dx-u6r" firstAttribute="trailing" secondItem="ocb-FS-N1A" secondAttribute="trailing" id="Wk4-XJ-0sJ"/>
+                                                    <constraint firstItem="sJX-Dx-u6r" firstAttribute="top" secondItem="Wzh-hO-1Vk" secondAttribute="top" id="YEM-rF-KhX"/>
                                                     <constraint firstItem="DjQ-AG-WeU" firstAttribute="top" secondItem="628-NJ-JKB" secondAttribute="bottom" constant="20" id="cjZ-Ac-StD"/>
                                                     <constraint firstItem="Wzh-hO-1Vk" firstAttribute="leading" secondItem="ocb-FS-N1A" secondAttribute="leading" id="efz-gY-Vpt"/>
                                                     <constraint firstAttribute="bottom" secondItem="ocb-FS-N1A" secondAttribute="bottom" id="fRf-eX-nru"/>
@@ -1335,6 +1385,7 @@ design and code an iOS 11 app.</string>
                                                     <constraint firstItem="0Fq-zn-vIJ" firstAttribute="trailing" secondItem="ocb-FS-N1A" secondAttribute="trailing" id="fpw-Oa-1xG"/>
                                                     <constraint firstItem="Wzh-hO-1Vk" firstAttribute="top" secondItem="0Fq-zn-vIJ" secondAttribute="bottom" constant="5" id="mAB-A6-kIz"/>
                                                     <constraint firstItem="jni-q3-Xwo" firstAttribute="centerX" secondItem="ocb-FS-N1A" secondAttribute="centerX" id="mnw-OH-Pp6"/>
+                                                    <constraint firstItem="sJX-Dx-u6r" firstAttribute="leading" secondItem="ocb-FS-N1A" secondAttribute="leading" id="o3y-Vy-I92"/>
                                                     <constraint firstItem="628-NJ-JKB" firstAttribute="leading" secondItem="ocb-FS-N1A" secondAttribute="leading" id="oFw-EX-QRv"/>
                                                     <constraint firstItem="Wzh-hO-1Vk" firstAttribute="trailing" secondItem="ocb-FS-N1A" secondAttribute="trailing" id="pb7-Bm-TIj"/>
                                                     <constraint firstItem="DjQ-AG-WeU" firstAttribute="leading" secondItem="ocb-FS-N1A" secondAttribute="leading" id="pgt-dI-JmA"/>
@@ -1354,8 +1405,17 @@ design and code an iOS 11 app.</string>
                                             <constraint firstItem="6nC-pA-5Qm" firstAttribute="top" secondItem="AzV-yh-QJA" secondAttribute="top" id="pNs-F3-3M4"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="14"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
@@ -1451,15 +1511,15 @@ design and code an iOS 11 app.</string>
             <objects>
                 <tableViewController id="Bfo-gp-xXY" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zha-Xk-DpJ">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fLh-cr-ogH">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fLh-cr-ogH" id="TTE-il-sim">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1480,38 +1540,46 @@ design and code an iOS 11 app.</string>
             <objects>
                 <viewController id="7ba-eV-iRr" customClass="MoreViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nRc-zM-2kf">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1G-t5-SuE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Tm5-lE-QHM">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6Z-6e-Uua">
-                                <rect key="frame" x="0.0" y="20" width="768" height="955"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJ9-FO-tAo" userLabel="Dialog View">
-                                        <rect key="frame" x="84" y="225.5" width="600" height="504"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJ9-FO-tAo" userLabel="Dialog View" customClass="DesignableView" customModule="Spring">
+                                        <rect key="frame" x="20" y="20" width="335" height="684"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svE-1z-lb5" userLabel="Sizing View">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="504"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="684"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY PROGRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIj-uw-EVo">
-                                                        <rect key="frame" x="246" y="20" width="108" height="18"/>
+                                                        <rect key="frame" x="113.5" y="20" width="108" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aH0-Y6-Dx1">
-                                                        <rect key="frame" x="20" y="46" width="560" height="98"/>
+                                                        <rect key="frame" x="20" y="46" width="295" height="98"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jm5-Qg-taP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="186.5" height="98"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="98"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pB2-qw-BZK">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="70"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="70"/>
                                                                         <subviews>
-                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder/image-ring-3" translatesAutoresizingMaskIntoConstraints="NO" id="mv5-2Z-bqo">
-                                                                                <rect key="frame" x="59" y="-0.5" width="70" height="70"/>
+                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder/image-ring-1" translatesAutoresizingMaskIntoConstraints="NO" id="mv5-2Z-bqo">
+                                                                                <rect key="frame" x="15" y="-0.5" width="70" height="70"/>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jk-ws-HYl">
-                                                                                <rect key="frame" x="66" y="23.5" width="55" height="24"/>
+                                                                                <rect key="frame" x="22" y="23.5" width="55" height="24"/>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1526,7 +1594,7 @@ design and code an iOS 11 app.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Design" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYW-Ve-YbG">
-                                                                        <rect key="frame" x="0.0" y="80" width="186.5" height="18"/>
+                                                                        <rect key="frame" x="0.0" y="80" width="98.5" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                         <color key="textColor" white="0.0" alpha="0.50414704619999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -1534,16 +1602,16 @@ design and code an iOS 11 app.</string>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8FJ-UA-hTA">
-                                                                <rect key="frame" x="186.5" y="0.0" width="187" height="98"/>
+                                                                <rect key="frame" x="98.5" y="0.0" width="98" height="98"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqe-kK-qhj">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="70"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="70"/>
                                                                         <subviews>
-                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder/image-ring-2" translatesAutoresizingMaskIntoConstraints="NO" id="wY6-LB-atH">
-                                                                                <rect key="frame" x="59" y="-0.5" width="70" height="70"/>
+                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder/image-ring-1" translatesAutoresizingMaskIntoConstraints="NO" id="wY6-LB-atH">
+                                                                                <rect key="frame" x="14.5" y="-0.5" width="70" height="70"/>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaj-kn-6uZ">
-                                                                                <rect key="frame" x="66" y="23.5" width="55" height="24"/>
+                                                                                <rect key="frame" x="21.5" y="23.5" width="55" height="24"/>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1557,8 +1625,8 @@ design and code an iOS 11 app.</string>
                                                                             <constraint firstItem="qaj-kn-6uZ" firstAttribute="centerX" secondItem="dqe-kK-qhj" secondAttribute="centerX" id="lz9-nl-SUa"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sketch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCR-O1-sg4">
-                                                                        <rect key="frame" x="0.0" y="80" width="187" height="18"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Design" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCR-O1-sg4">
+                                                                        <rect key="frame" x="0.0" y="80" width="98" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                         <color key="textColor" white="0.0" alpha="0.50414704619999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -1566,16 +1634,16 @@ design and code an iOS 11 app.</string>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MwC-i0-4Vh">
-                                                                <rect key="frame" x="373.5" y="0.0" width="186.5" height="98"/>
+                                                                <rect key="frame" x="196.5" y="0.0" width="98.5" height="98"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVG-X4-nsb">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="70"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="70"/>
                                                                         <subviews>
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder/image-ring-1" translatesAutoresizingMaskIntoConstraints="NO" id="zZa-93-oGJ">
-                                                                                <rect key="frame" x="58" y="-0.5" width="70" height="70"/>
+                                                                                <rect key="frame" x="14" y="-0.5" width="70" height="70"/>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJo-Go-FNT">
-                                                                                <rect key="frame" x="66" y="23.5" width="55" height="24"/>
+                                                                                <rect key="frame" x="22" y="23.5" width="55" height="24"/>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1589,8 +1657,8 @@ design and code an iOS 11 app.</string>
                                                                             <constraint firstItem="CJo-Go-FNT" firstAttribute="centerY" secondItem="QVG-X4-nsb" secondAttribute="centerY" id="ubR-kY-Mws"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYU-9o-yhf">
-                                                                        <rect key="frame" x="0.0" y="80" width="186.5" height="18"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Design" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYU-9o-yhf">
+                                                                        <rect key="frame" x="0.0" y="80" width="98.5" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                         <color key="textColor" white="0.0" alpha="0.50414704619999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -1600,13 +1668,13 @@ design and code an iOS 11 app.</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="YqI-mM-OKn">
-                                                        <rect key="frame" x="0.0" y="164" width="600" height="180"/>
+                                                        <rect key="frame" x="0.0" y="164" width="335" height="360"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MVb-vq-sTy">
-                                                                <rect key="frame" x="0.0" y="0.0" width="299.5" height="180"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="179.5"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ0-tx-ieh">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="299.5" height="59.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="59"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                         <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1619,7 +1687,7 @@ design and code an iOS 11 app.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACg-bs-nuj">
-                                                                        <rect key="frame" x="0.0" y="60.5" width="299.5" height="59"/>
+                                                                        <rect key="frame" x="0.0" y="60" width="335" height="59.5"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                         <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1629,7 +1697,7 @@ design and code an iOS 11 app.</string>
                                                                         </state>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqK-xn-XSm">
-                                                                        <rect key="frame" x="0.0" y="120.5" width="299.5" height="59.5"/>
+                                                                        <rect key="frame" x="0.0" y="120.5" width="335" height="59"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                         <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1644,10 +1712,10 @@ design and code an iOS 11 app.</string>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="kmP-Ss-eHE">
-                                                                <rect key="frame" x="300.5" y="0.0" width="299.5" height="180"/>
+                                                                <rect key="frame" x="0.0" y="180.5" width="335" height="179.5"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Au-wU-Lu4">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="299.5" height="59.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="59"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                         <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1660,7 +1728,7 @@ design and code an iOS 11 app.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nc-lI-jHd">
-                                                                        <rect key="frame" x="0.0" y="60.5" width="299.5" height="59"/>
+                                                                        <rect key="frame" x="0.0" y="60" width="335" height="59.5"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                         <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1673,7 +1741,7 @@ design and code an iOS 11 app.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yk0-pd-8Us">
-                                                                        <rect key="frame" x="0.0" y="120.5" width="299.5" height="59.5"/>
+                                                                        <rect key="frame" x="0.0" y="120.5" width="335" height="59"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                         <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1695,7 +1763,7 @@ design and code an iOS 11 app.</string>
                                                         <variation key="widthClass=regular" axis="horizontal"/>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only made possible with your kind support. Thank you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E36-tV-8KF">
-                                                        <rect key="frame" x="215" y="378" width="170" height="54"/>
+                                                        <rect key="frame" x="82.5" y="558" width="170" height="54"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="170" id="mXB-q0-sQk"/>
                                                         </constraints>
@@ -1704,7 +1772,7 @@ design and code an iOS 11 app.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mak-nY-hZI">
-                                                        <rect key="frame" x="247" y="447" width="106" height="22"/>
+                                                        <rect key="frame" x="114.5" y="627" width="106" height="22"/>
                                                         <state key="normal" title="@MengTo" image="More/twitter">
                                                             <color key="titleColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -1739,8 +1807,17 @@ design and code an iOS 11 app.</string>
                                             <constraint firstAttribute="width" constant="600" id="peQ-LP-Mmw"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="14"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
@@ -1784,8 +1861,12 @@ design and code an iOS 11 app.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="58Y-AV-cZ1" firstAttribute="trailing" secondItem="e6Z-6e-Uua" secondAttribute="trailing" id="4gJ-B0-T22"/>
+                            <constraint firstItem="I1G-t5-SuE" firstAttribute="leading" secondItem="58Y-AV-cZ1" secondAttribute="leading" id="6ME-7z-fn7"/>
                             <constraint firstItem="58Y-AV-cZ1" firstAttribute="bottom" secondItem="e6Z-6e-Uua" secondAttribute="bottom" id="LYb-6C-8a6"/>
+                            <constraint firstItem="I1G-t5-SuE" firstAttribute="trailing" secondItem="58Y-AV-cZ1" secondAttribute="trailing" id="MJf-22-tKk"/>
+                            <constraint firstItem="I1G-t5-SuE" firstAttribute="top" secondItem="nRc-zM-2kf" secondAttribute="top" id="Obz-fa-aBW"/>
                             <constraint firstItem="e6Z-6e-Uua" firstAttribute="top" secondItem="58Y-AV-cZ1" secondAttribute="top" id="fNE-6c-7h5"/>
+                            <constraint firstAttribute="bottom" secondItem="I1G-t5-SuE" secondAttribute="bottom" id="q2W-Lg-uuE"/>
                             <constraint firstItem="e6Z-6e-Uua" firstAttribute="leading" secondItem="58Y-AV-cZ1" secondAttribute="leading" id="tO3-Em-sHM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="58Y-AV-cZ1"/>
@@ -1797,18 +1878,18 @@ design and code an iOS 11 app.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isn-DJ-cxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5156" y="-407"/>
+            <point key="canvasLocation" x="5156" y="-407.0464767616192"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="ckS-nj-z4G">
             <objects>
                 <viewController id="F78-1a-8hR" customClass="WebViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vzW-c3-CT9">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGS-gZ-EsO">
-                                <rect key="frame" x="0.0" y="64" width="768" height="916"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -2113,7 +2194,7 @@ design and code an iOS 11 app.</string>
                     <tabBarItem key="tabBarItem" title="Home" image="Tab Bar/home" selectedImage="Tab Bar/home-active" id="LQm-F1-NFf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="1Vz-6d-afs">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2132,7 +2213,7 @@ design and code an iOS 11 app.</string>
                     <tabBarItem key="tabBarItem" title="Chapters" image="Tab Bar/chapters" selectedImage="Tab Bar/chapters-active" id="3DL-Qv-RCl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="bda-8X-Cee">
-                        <rect key="frame" x="0.0" y="20" width="768" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2151,7 +2232,7 @@ design and code an iOS 11 app.</string>
                     <tabBarItem key="tabBarItem" title="Bookmarks" image="Tab Bar/bookmarks" selectedImage="Tab Bar/bookmarks-active" id="bQK-Vd-vt3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gJL-eW-4WG">
-                        <rect key="frame" x="0.0" y="20" width="768" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2170,12 +2251,12 @@ design and code an iOS 11 app.</string>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="3Nc-gx-dWy">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="0HU-Rw-CRQ">
-                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -2185,6 +2266,274 @@ design and code an iOS 11 app.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vC-QP-6SE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5964" y="-407"/>
+        </scene>
+        <!--Discount-->
+        <scene sceneID="8Bw-Wh-6s8">
+            <objects>
+                <viewController storyboardIdentifier="Discount" id="Uh2-Vq-STs" userLabel="Discount" customClass="DiscountViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RfA-NN-aii">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bp2-mU-ZaQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XAu-Da-OGX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="os6-5k-aIm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRW-Um-BOd" customClass="DesignableView" customModule="Spring">
+                                        <rect key="frame" x="20" y="84" width="335" height="479.5"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uc4-ow-LiS" userLabel="Inner View">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="479.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="8aI-vU-p9s">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="180"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="180" id="5Pz-9F-iT2"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receive these discounts with the purchase of the book." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vk-e6-wrg">
+                                                        <rect key="frame" x="40" y="47.5" width="255" height="86"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8xc-yL-VTf">
+                                                        <rect key="frame" x="16" y="200" width="303" height="130.5"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-wf-u4F">
+                                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="130.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Sketch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ElY-ZG-Ez8">
+                                                                        <rect key="frame" x="48" y="0.0" width="51" height="18"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oei-HR-B7k">
+                                                                        <rect key="frame" x="56" y="18" width="35" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                        <color key="textColor" red="1" green="0.38823529410000002" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jca-PI-ZGa">
+                                                                        <rect key="frame" x="27.5" y="38.5" width="92" height="92"/>
+                                                                        <state key="normal" image="Logo-Sketch"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5hU-hy-hUA">
+                                                                <rect key="frame" x="156.5" y="0.0" width="146.5" height="130.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="InVision" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GFv-JD-DZU">
+                                                                        <rect key="frame" x="44" y="0.0" width="58.5" height="18"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6mo free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypo-qp-5Hp">
+                                                                        <rect key="frame" x="37" y="18" width="72.5" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                        <color key="textColor" red="1" green="0.38823529410000002" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNd-5V-bzM">
+                                                                        <rect key="frame" x="27.5" y="38.5" width="92" height="92"/>
+                                                                        <state key="normal" image="Logo-InVision"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fRk-Rb-TwP">
+                                                        <rect key="frame" x="16" y="338.5" width="303" height="130.5"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ihE-by-2mJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="130.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Framer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-pp-d9q">
+                                                                        <rect key="frame" x="47" y="0.0" width="52.5" height="18"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRG-n7-Rcs">
+                                                                        <rect key="frame" x="56" y="18" width="35" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                        <color key="textColor" red="1" green="0.38823529410000002" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpa-3M-9j4">
+                                                                        <rect key="frame" x="27.5" y="38.5" width="92" height="92"/>
+                                                                        <state key="normal" image="Logo-Framer"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4kk-Dx-crq">
+                                                                <rect key="frame" x="156.5" y="0.0" width="146.5" height="130.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CJ4-U6-ptG">
+                                                                        <rect key="frame" x="52" y="0.0" width="42.5" height="18"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPy-CS-jP6">
+                                                                        <rect key="frame" x="55.5" y="18" width="36" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                        <color key="textColor" red="1" green="0.38823529410000002" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwY-s4-og4">
+                                                                        <rect key="frame" x="27.5" y="38.5" width="92" height="92"/>
+                                                                        <state key="normal" image="Logo-Angle"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="8xc-yL-VTf" firstAttribute="centerX" secondItem="uc4-ow-LiS" secondAttribute="centerX" id="2w0-VP-tKX"/>
+                                                    <constraint firstItem="fRk-Rb-TwP" firstAttribute="top" secondItem="8xc-yL-VTf" secondAttribute="bottom" constant="8" id="66d-R2-Fnw"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8aI-vU-p9s" secondAttribute="trailing" id="AEW-Xn-dLH"/>
+                                                    <constraint firstItem="6vk-e6-wrg" firstAttribute="leading" secondItem="uc4-ow-LiS" secondAttribute="leading" constant="40" id="Psf-KA-HHg"/>
+                                                    <constraint firstItem="8aI-vU-p9s" firstAttribute="top" secondItem="uc4-ow-LiS" secondAttribute="top" id="R4y-d2-iOh"/>
+                                                    <constraint firstItem="fRk-Rb-TwP" firstAttribute="leading" secondItem="uc4-ow-LiS" secondAttribute="leading" constant="16" id="Sop-EQ-ChB"/>
+                                                    <constraint firstItem="6vk-e6-wrg" firstAttribute="centerX" secondItem="uc4-ow-LiS" secondAttribute="centerX" id="TI6-aH-IAr"/>
+                                                    <constraint firstItem="8xc-yL-VTf" firstAttribute="top" secondItem="8aI-vU-p9s" secondAttribute="bottom" constant="20" id="V4N-O7-Jv7"/>
+                                                    <constraint firstItem="8xc-yL-VTf" firstAttribute="leading" secondItem="uc4-ow-LiS" secondAttribute="leading" constant="16" id="WVl-ft-FEI"/>
+                                                    <constraint firstItem="6vk-e6-wrg" firstAttribute="centerY" secondItem="8aI-vU-p9s" secondAttribute="centerY" id="ek9-hd-Fes"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6vk-e6-wrg" secondAttribute="trailing" constant="40" id="fAm-Zg-sPO"/>
+                                                    <constraint firstItem="8aI-vU-p9s" firstAttribute="leading" secondItem="uc4-ow-LiS" secondAttribute="leading" id="fX9-Ma-Ai8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fRk-Rb-TwP" secondAttribute="trailing" constant="16" id="gKe-in-xXW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8xc-yL-VTf" secondAttribute="trailing" constant="16" id="hT6-ox-5dj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="fRk-Rb-TwP" secondAttribute="bottom" constant="10" id="ohe-KF-3R2"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="uc4-ow-LiS" secondAttribute="trailing" id="1Za-6e-0n6"/>
+                                            <constraint firstItem="uc4-ow-LiS" firstAttribute="leading" secondItem="gRW-Um-BOd" secondAttribute="leading" id="5rK-qj-dph"/>
+                                            <constraint firstAttribute="width" constant="500" id="Acd-M8-QhT"/>
+                                            <constraint firstItem="uc4-ow-LiS" firstAttribute="top" secondItem="gRW-Um-BOd" secondAttribute="top" id="jMK-B7-Ris"/>
+                                            <constraint firstAttribute="bottom" secondItem="uc4-ow-LiS" secondAttribute="bottom" id="o5s-ij-40Q"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Acd-M8-QhT"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="Acd-M8-QhT"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Acd-M8-QhT"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gRW-Um-BOd" secondAttribute="trailing" constant="20" id="6ez-ud-b7v"/>
+                                    <constraint firstItem="gRW-Um-BOd" firstAttribute="centerX" secondItem="os6-5k-aIm" secondAttribute="centerX" id="Bpg-M1-0ti"/>
+                                    <constraint firstItem="gRW-Um-BOd" firstAttribute="leading" secondItem="os6-5k-aIm" secondAttribute="leading" constant="20" id="SLc-qK-sD5"/>
+                                    <constraint firstItem="gRW-Um-BOd" firstAttribute="centerY" secondItem="os6-5k-aIm" secondAttribute="centerY" id="VUD-bI-SLW"/>
+                                    <constraint firstItem="gRW-Um-BOd" firstAttribute="top" secondItem="os6-5k-aIm" secondAttribute="top" constant="20" id="sDS-mY-Mnz"/>
+                                    <constraint firstAttribute="bottom" secondItem="gRW-Um-BOd" secondAttribute="bottom" constant="20" id="yj3-dp-S29"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SLc-qK-sD5"/>
+                                        <exclude reference="VUD-bI-SLW"/>
+                                        <exclude reference="sDS-mY-Mnz"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="sDS-mY-Mnz"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="VUD-bI-SLW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="SLc-qK-sD5"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="SLc-qK-sD5"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZCT-Dd-xqk" firstAttribute="bottom" secondItem="os6-5k-aIm" secondAttribute="bottom" id="0bC-Sg-qc4"/>
+                            <constraint firstAttribute="trailing" secondItem="bp2-mU-ZaQ" secondAttribute="trailing" id="H5u-0Y-eBc"/>
+                            <constraint firstItem="os6-5k-aIm" firstAttribute="leading" secondItem="ZCT-Dd-xqk" secondAttribute="leading" id="L2A-7a-fIA"/>
+                            <constraint firstItem="os6-5k-aIm" firstAttribute="top" secondItem="ZCT-Dd-xqk" secondAttribute="top" id="N4T-DL-HQK"/>
+                            <constraint firstItem="bp2-mU-ZaQ" firstAttribute="top" secondItem="RfA-NN-aii" secondAttribute="top" id="W3P-in-cN3"/>
+                            <constraint firstAttribute="bottom" secondItem="bp2-mU-ZaQ" secondAttribute="bottom" id="Xzp-O8-dMg"/>
+                            <constraint firstItem="bp2-mU-ZaQ" firstAttribute="leading" secondItem="RfA-NN-aii" secondAttribute="leading" id="ZtJ-Sw-l9i"/>
+                            <constraint firstItem="os6-5k-aIm" firstAttribute="trailing" secondItem="ZCT-Dd-xqk" secondAttribute="trailing" id="pbl-a8-GnH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZCT-Dd-xqk"/>
+                    </view>
+                    <connections>
+                        <outlet property="panToClose" destination="c4P-Z7-kGn" id="Zxm-bi-jR1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Xr-lA-4gj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="c4P-Z7-kGn" customClass="InteractionPanToClose" customModule="DesignCodeApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="dialogView" destination="gRW-Um-BOd" id="Mph-iN-qtz"/>
+                        <outlet property="scrollView" destination="os6-5k-aIm" id="g7M-QJ-yBZ"/>
+                        <outlet property="viewController" destination="Uh2-Vq-STs" id="Igd-Z9-YTI"/>
+                        <outlet property="visualEffectView" destination="bp2-mU-ZaQ" id="Ulw-1U-gGi"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="5963" y="378"/>
         </scene>
     </scenes>
     <resources>
@@ -2201,9 +2550,13 @@ design and code an iOS 11 app.</string>
         <image name="Benefit-iOS-small" width="36" height="36"/>
         <image name="Bookmarks/code" width="44" height="44"/>
         <image name="Home" width="2880" height="1600"/>
+        <image name="Logo-Angle" width="92" height="92"/>
         <image name="Logo-Apple" width="36" height="44"/>
         <image name="Logo-DesignCode" width="28" height="28"/>
+        <image name="Logo-Framer" width="92" height="92"/>
         <image name="Logo-Google" width="100" height="37"/>
+        <image name="Logo-InVision" width="92" height="92"/>
+        <image name="Logo-Sketch" width="92" height="92"/>
         <image name="Logo-Stripe" width="81" height="33"/>
         <image name="More/ambience" width="36" height="36"/>
         <image name="More/community" width="36" height="36"/>
@@ -2213,8 +2566,6 @@ design and code an iOS 11 app.</string>
         <image name="More/safari" width="36" height="36"/>
         <image name="More/twitter" width="24" height="20"/>
         <image name="Placeholder/image-ring-1" width="70" height="70"/>
-        <image name="Placeholder/image-ring-2" width="70" height="70"/>
-        <image name="Placeholder/image-ring-3" width="70" height="70"/>
         <image name="Quote-Begin" width="23" height="18"/>
         <image name="Quote-End" width="12" height="9"/>
         <image name="Tab Bar/bookmarks" width="20" height="26"/>

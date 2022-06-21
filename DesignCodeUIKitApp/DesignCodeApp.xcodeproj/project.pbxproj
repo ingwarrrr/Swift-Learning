@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		09D842196496D3BC05613910 /* Pods_DesignCodeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379C1F7042FC377720DF6981 /* Pods_DesignCodeApp.framework */; };
+		790DD7B82024A2B400F2C3CC /* ExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DD7B72024A2B400F2C3CC /* ExercisesTableViewController.swift */; };
+		790DD7BC2024A5FA00F2C3CC /* ExerciseDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790DD7BB2024A5FA00F2C3CC /* ExerciseDialogViewController.swift */; };
 		7932CE7F200BDD810006980E /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932CE7E200BDD810006980E /* ChaptersViewController.swift */; };
 		7932CE81200BE1390006980E /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932CE80200BE1390006980E /* BookmarkTableViewCell.swift */; };
 		7932CE83200BE1890006980E /* BookmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932CE82200BE1890006980E /* BookmarksTableViewController.swift */; };
 		7932CE85200BE6C80006980E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932CE84200BE6C80006980E /* WebViewController.swift */; };
 		7932CE87200BE9080006980E /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932CE86200BE9080006980E /* MoreViewController.swift */; };
 		79528324200FD2F0005F248C /* PresentSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79528323200FD2F0005F248C /* PresentSectionViewController.swift */; };
+		796871252020A1F00000AFCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796871242020A1F00000AFCA /* LoginViewController.swift */; };
+		79878B7B202482C400775586 /* UILabel+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79878B7A202482C400775586 /* UILabel+Animate.swift */; };
+		79878B7F2024A16700775586 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79878B7E2024A16700775586 /* ExerciseTableViewCell.swift */; };
 		799945282018E9B3003AFA48 /* InteractionPanToClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799945272018E9B3003AFA48 /* InteractionPanToClose.swift */; };
 		7999452A2018F867003AFA48 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799945292018F867003AFA48 /* PurchaseViewController.swift */; };
 		79E0A7FB201A71B700FCCD58 /* UILabel+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0A7FA201A71B700FCCD58 /* UILabel+Inspectable.swift */; };
@@ -34,12 +39,17 @@
 /* Begin PBXFileReference section */
 		379C1F7042FC377720DF6981 /* Pods_DesignCodeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesignCodeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A329893A4BEBAA8AA387C6 /* Pods-DesignCodeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCodeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		790DD7B72024A2B400F2C3CC /* ExercisesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesTableViewController.swift; sourceTree = "<group>"; };
+		790DD7BB2024A5FA00F2C3CC /* ExerciseDialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDialogViewController.swift; sourceTree = "<group>"; };
 		7932CE7E200BDD810006980E /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 		7932CE80200BE1390006980E /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
 		7932CE82200BE1890006980E /* BookmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewController.swift; sourceTree = "<group>"; };
 		7932CE84200BE6C80006980E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7932CE86200BE9080006980E /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		79528323200FD2F0005F248C /* PresentSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSectionViewController.swift; sourceTree = "<group>"; };
+		796871242020A1F00000AFCA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		79878B7A202482C400775586 /* UILabel+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Animate.swift"; sourceTree = "<group>"; };
+		79878B7E2024A16700775586 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		799945272018E9B3003AFA48 /* InteractionPanToClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionPanToClose.swift; sourceTree = "<group>"; };
 		799945292018F867003AFA48 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		79E0A7FA201A71B700FCCD58 /* UILabel+Inspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Inspectable.swift"; sourceTree = "<group>"; };
@@ -123,9 +133,14 @@
 				7932CE84200BE6C80006980E /* WebViewController.swift */,
 				9688C5C41FE72BF000BCD68A /* Data.swift */,
 				9698CD221FBB5DE000501C47 /* Main.storyboard */,
+				79878B7E2024A16700775586 /* ExerciseTableViewCell.swift */,
+				790DD7B72024A2B400F2C3CC /* ExercisesTableViewController.swift */,
+				79878B7A202482C400775586 /* UILabel+Animate.swift */,
+				796871242020A1F00000AFCA /* LoginViewController.swift */,
 				79E0A7FA201A71B700FCCD58 /* UILabel+Inspectable.swift */,
 				79E0A7FC201A728100FCCD58 /* DiscountViewController.swift */,
 				7932CE86200BE9080006980E /* MoreViewController.swift */,
+				790DD7BB2024A5FA00F2C3CC /* ExerciseDialogViewController.swift */,
 				9698CD281FBB5DE000501C47 /* Assets.xcassets */,
 				799945272018E9B3003AFA48 /* InteractionPanToClose.swift */,
 				799945292018F867003AFA48 /* PurchaseViewController.swift */,
@@ -213,13 +228,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesignCodeApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D25AB508E60D265FC6C660B8 /* [CP] Embed Pods Frameworks */ = {
@@ -228,9 +246,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKRingProgressView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -262,11 +287,16 @@
 				9698CD211FBB5DE000501C47 /* HomeViewController.swift in Sources */,
 				7999452A2018F867003AFA48 /* PurchaseViewController.swift in Sources */,
 				7932CE87200BE9080006980E /* MoreViewController.swift in Sources */,
+				79878B7F2024A16700775586 /* ExerciseTableViewCell.swift in Sources */,
 				9688C5C51FE72BF000BCD68A /* Data.swift in Sources */,
+				796871252020A1F00000AFCA /* LoginViewController.swift in Sources */,
 				9698CD1F1FBB5DE000501C47 /* AppDelegate.swift in Sources */,
 				96ECA89B1FDF177400DE9E40 /* SectionViewController.swift in Sources */,
 				96ABF7311FEEA64300AF4146 /* TestimonialViewController.swift in Sources */,
+				79878B7B202482C400775586 /* UILabel+Animate.swift in Sources */,
+				790DD7BC2024A5FA00F2C3CC /* ExerciseDialogViewController.swift in Sources */,
 				79E0A7FD201A728100FCCD58 /* DiscountViewController.swift in Sources */,
+				790DD7B82024A2B400F2C3CC /* ExercisesTableViewController.swift in Sources */,
 				9688C5C91FE72D3200BCD68A /* SectionCollectionViewCell.swift in Sources */,
 				799945282018E9B3003AFA48 /* InteractionPanToClose.swift in Sources */,
 				96ABF7331FEF113100AF4146 /* TestimonialCollectionViewCell.swift in Sources */,

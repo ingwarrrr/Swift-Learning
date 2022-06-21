@@ -1,17 +1,17 @@
 //
-//  DiscountViewController.swift
+//  LoginViewController.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 25/01/18.
+//  Created by Tiago Mergulhão on 30/01/18.
 //  Copyright © 2018 Meng To. All rights reserved.
 //
 
 import UIKit
 
-class DiscountViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet var panToClose: InteractionPanToClose!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -1,8 +1,9 @@
 //
-//  ExerciseDialogViewController.swift
-//  MKRingProgressView
+//  ExerciseViewController.swift
+//  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 02/02/18.
+//  Created by Tiago Mergulhão on 31/01/18.
+//  Copyright © 2018 Meng To. All rights reserved.
 //
 
 import UIKit
@@ -30,11 +31,9 @@ class ExerciseDialogViewController: UIViewController {
         dialogView.alpha = 0
 
         let animator = UIViewPropertyAnimator(duration: 0.8, dampingRatio: 0.7) {
-
             self.dialogView.transform = .identity
             self.dialogView.alpha = 1
         }
-
         animator.startAnimation()
     }
 

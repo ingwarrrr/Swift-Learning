@@ -31,7 +31,7 @@ let exercises = [
                 "120% to 145%",
                 "100% to 160%",
             ],
-            ],
+        ],
     ],
     "chapter-1-Sketch": [
         [

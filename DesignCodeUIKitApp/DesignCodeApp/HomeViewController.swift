@@ -32,7 +32,11 @@ class HomeViewController: UIViewController {
             player.play()
         }
     }
-    
+
+    @IBAction func navigationBarBuyButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "Home to Purchase", sender: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

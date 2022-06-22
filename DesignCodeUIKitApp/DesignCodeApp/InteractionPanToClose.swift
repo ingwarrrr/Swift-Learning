@@ -18,6 +18,16 @@ class InteractionPanToClose: UIPercentDrivenInteractiveTransition {
     var panGestureRecognizer : UIPanGestureRecognizer!
     var tapGestureRecognizer : UITapGestureRecognizer!
 
+    func setGestureRecognizer () {
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handle))
+        scrollView.addGestureRecognizer(panGestureRecognizer)
+        panGestureRecognizer.delegate = self
+
+        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(animateDialogDisappearAndDismiss))
+        scrollView.addGestureRecognizer(tapGestureRecognizer)
+        tapGestureRecognizer.delegate = self
+    }
+
     func rotateDialogOut () {
 
         let rotationAngle = CGFloat(Int(arc4random_uniform(60)) - 30) * CGFloat.pi / 180.0
@@ -45,20 +55,13 @@ class InteractionPanToClose: UIPercentDrivenInteractiveTransition {
     @objc func animateDialogDisappearAndDismiss (_ gesture : UITapGestureRecognizer) {
 
         UIView.animate(withDuration: 0.5, animations: {
+
             self.rotateDialogOut()
+
         }) { (finished) in
+
             self.viewController.dismiss(animated: true)
         }
-    }
-
-    func setGestureRecognizer () {
-        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handle))
-        scrollView.addGestureRecognizer(panGestureRecognizer)
-        panGestureRecognizer.delegate = self
-
-        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(animateDialogDisappearAndDismiss))
-        scrollView.addGestureRecognizer(tapGestureRecognizer)
-        tapGestureRecognizer.delegate = self
     }
 
     @objc func handle(_ gesture : UIPanGestureRecognizer) {

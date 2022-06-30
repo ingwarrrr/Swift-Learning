@@ -12,6 +12,8 @@ class ChaptersViewController: UIViewController {
 
     @IBOutlet weak var chapterCollectionView: UICollectionView!
 
+    let sections = ContentAPI.shared.sections
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,9 +31,9 @@ extension ChaptersViewController : UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sectionCell", for: indexPath) as! SectionCollectionViewCell
         let section = sections[indexPath.row]
-        cell.titleLabel.text = section["title"]
-        cell.captionLabel.text = section["caption"]
-        cell.coverImageView.image = UIImage(named: section["image"]!)
+        cell.titleLabel.text = section.title
+        cell.captionLabel.text = section.caption
+        cell.coverImageView.image = UIImage(named: section.imageName)
         
         cell.layer.transform = animateCell(cellFrame: cell.frame)
         

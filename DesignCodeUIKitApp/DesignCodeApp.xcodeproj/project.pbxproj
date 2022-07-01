@@ -12,6 +12,8 @@
 		790D67B920226B8300BBD0A3 /* ExerciseDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D67B820226B8300BBD0A3 /* ExerciseDialogViewController.swift */; };
 		7919265920507EC0001A2D5B /* PresentMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919265820507EC0001A2D5B /* PresentMoreViewController.swift */; };
 		7919265B205142D3001A2D5B /* CATransform3D+Perspective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919265A205142D3001A2D5B /* CATransform3D+Perspective.swift */; };
+		7928E3E720758FAE00D13EAF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7928E3E620758FAE00D13EAF /* CoreDataManager.swift */; };
+		7928E3E820758FFE00D13EAF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 790C94762075427000C9D986 /* Model.xcdatamodeld */; };
 		792AEAE52046F3F900E4F2E5 /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AEAE42046F3F900E4F2E5 /* BenefitsViewController.swift */; };
 		792AEAE72046F52400E4F2E5 /* BenefitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AEAE62046F52400E4F2E5 /* BenefitCollectionViewCell.swift */; };
 		792AEAEB2047358200E4F2E5 /* Embed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792AEAE82047347800E4F2E5 /* Embed.storyboard */; };
@@ -23,6 +25,7 @@
 		7932CE83200BE1890006980E /* BookmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932CE82200BE1890006980E /* BookmarksTableViewController.swift */; };
 		7932CE85200BE6C80006980E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932CE84200BE6C80006980E /* WebViewController.swift */; };
 		7932CE87200BE9080006980E /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932CE86200BE9080006980E /* MoreViewController.swift */; };
+		7943A0DE2077990A00F243C8 /* Parts.json in Resources */ = {isa = PBXBuildFile; fileRef = 7928E3E92075906A00D13EAF /* Parts.json */; };
 		79528324200FD2F0005F248C /* PresentSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79528323200FD2F0005F248C /* PresentSectionViewController.swift */; };
 		797EEE8F202368F800123433 /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EEE8E202368F800123433 /* QuestionCollectionViewCell.swift */; };
 		797EEE91202371BE00123433 /* ScoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EEE90202371BE00123433 /* ScoreCollectionViewCell.swift */; };
@@ -52,10 +55,13 @@
 /* Begin PBXFileReference section */
 		379C1F7042FC377720DF6981 /* Pods_DesignCodeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesignCodeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A329893A4BEBAA8AA387C6 /* Pods-DesignCodeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCodeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		790C94772075427000C9D986 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		790D67B62022509900BBD0A3 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		790D67B820226B8300BBD0A3 /* ExerciseDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDialogViewController.swift; sourceTree = "<group>"; };
 		7919265820507EC0001A2D5B /* PresentMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentMoreViewController.swift; sourceTree = "<group>"; };
 		7919265A205142D3001A2D5B /* CATransform3D+Perspective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CATransform3D+Perspective.swift"; sourceTree = "<group>"; };
+		7928E3E620758FAE00D13EAF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		7928E3E92075906A00D13EAF /* Parts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Parts.json; sourceTree = "<group>"; };
 		792AEAE42046F3F900E4F2E5 /* BenefitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
 		792AEAE62046F52400E4F2E5 /* BenefitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitCollectionViewCell.swift; sourceTree = "<group>"; };
 		792AEAE82047347800E4F2E5 /* Embed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Embed.storyboard; sourceTree = "<group>"; };
@@ -190,7 +196,6 @@
 		9698CD1D1FBB5DE000501C47 /* DesignCodeApp */ = {
 			isa = PBXGroup;
 			children = (
-				79F163E5204F2A5600F58C8F /* UILabel+DynamicType.swift */,
 				9698CD1E1FBB5DE000501C47 /* AppDelegate.swift */,
 				9698CD201FBB5DE000501C47 /* HomeViewController.swift */,
 				9688C5C81FE72D3200BCD68A /* SectionCollectionViewCell.swift */,
@@ -200,7 +205,11 @@
 				9688C5C41FE72BF000BCD68A /* Data.swift */,
 				79953122206AF69300DCEBEB /* Sections.json */,
 				79953124206B203500DCEBEB /* Bookmarks.json */,
+				7928E3E92075906A00D13EAF /* Parts.json */,
+				7928E3E620758FAE00D13EAF /* CoreDataManager.swift */,
 				79953126206B212400DCEBEB /* ContentAPI.swift */,
+				790C94762075427000C9D986 /* Model.xcdatamodeld */,
+				79F163E5204F2A5600F58C8F /* UILabel+DynamicType.swift */,
 				79E0A7FA201A71B700FCCD58 /* UILabel+Inspectable.swift */,
 				7932CE86200BE9080006980E /* MoreViewController.swift */,
 				79F7A70F20208FB600C54511 /* ExercisesTableViewController.swift */,
@@ -292,6 +301,7 @@
 				792AEAF12047361100E4F2E5 /* Section.storyboard in Resources */,
 				9698CD291FBB5DE000501C47 /* Assets.xcassets in Resources */,
 				792AEAF820473C5D00E4F2E5 /* WebViewController.storyboard in Resources */,
+				7943A0DE2077990A00F243C8 /* Parts.json in Resources */,
 				9698CD241FBB5DE000501C47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +384,7 @@
 				96ECA89B1FDF177400DE9E40 /* SectionViewController.swift in Sources */,
 				7919265920507EC0001A2D5B /* PresentMoreViewController.swift in Sources */,
 				79953127206B212400DCEBEB /* ContentAPI.swift in Sources */,
+				7928E3E720758FAE00D13EAF /* CoreDataManager.swift in Sources */,
 				797EEE8F202368F800123433 /* QuestionCollectionViewCell.swift in Sources */,
 				96ABF7311FEEA64300AF4146 /* TestimonialViewController.swift in Sources */,
 				79E0A7FD201A728100FCCD58 /* DiscountViewController.swift in Sources */,
@@ -389,6 +400,7 @@
 				7932CE7F200BDD810006980E /* ChaptersViewController.swift in Sources */,
 				7932CE81200BE1390006980E /* BookmarkTableViewCell.swift in Sources */,
 				792AEAE52046F3F900E4F2E5 /* BenefitsViewController.swift in Sources */,
+				7928E3E820758FFE00D13EAF /* Model.xcdatamodeld in Sources */,
 				79E0A7FB201A71B700FCCD58 /* UILabel+Inspectable.swift in Sources */,
 				79F7A71020208FB600C54511 /* ExercisesTableViewController.swift in Sources */,
 				792AEAE72046F52400E4F2E5 /* BenefitCollectionViewCell.swift in Sources */,
@@ -581,6 +593,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		790C94762075427000C9D986 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				790C94772075427000C9D986 /* Model.xcdatamodel */,
+			);
+			currentVersion = 790C94772075427000C9D986 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		9698CD251FBB5DE000501C47 /* DesignCodeApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var chapter1CollectionView: UICollectionView!
     var isStatusBarHidden = false
 
-    let sections = ContentAPI.shared.sections
+    var sections : Array<Section> = CoreDataManager.shared.sections
 
     let presentSectionViewController = PresentSectionViewController()
     
@@ -126,7 +126,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let section = sections[indexPath.row]
         cell.titleLabel.text = section.title
         cell.captionLabel.text = section.caption
-        cell.coverImageView.image = UIImage(named: section.imageName)
+        cell.coverImageView.image = UIImage(named: section.imageName!)
         
         cell.layer.transform = animateCell(cellFrame: cell.frame)
         

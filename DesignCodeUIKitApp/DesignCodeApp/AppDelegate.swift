@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
 
         let ambience = Ambience.shared
 
@@ -25,12 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .contrast(lower: nil),
         ])
 
-        CoreDataManager.shared.loadFromData()
+        RealmManager.loadFromData()
 
         return true
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        CoreDataManager.shared.saveContext()
     }
 }

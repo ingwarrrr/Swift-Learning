@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SectionViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
@@ -15,7 +16,7 @@ class SectionViewController: UIViewController {
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     var section : Section!
-    var sections : Array<Section>!
+    var sections : Results<Section>!
     var indexPath: IndexPath!
 
     @IBOutlet weak var scrollView: UIScrollView!
@@ -29,8 +30,8 @@ class SectionViewController: UIViewController {
         titleLabel.text = section.title
         captionLabel.text = section.caption
         bodyLabel.text = section.body
-        coverImageView.image = UIImage(named: section.imageName!)
-        // progressLabel.text = "\(indexPath.row+1) / \(sections.count)"
+        coverImageView.image = UIImage(named: section.imageName)
+        progressLabel.text = "\(indexPath.row+1) / \(sections.count)"
     }
     
     override var prefersStatusBarHidden: Bool {

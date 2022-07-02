@@ -10,7 +10,9 @@ import UIKit
 
 class BookmarksTableViewController : UITableViewController {
 
-    var bookmarks : Array<Bookmark> { return CoreDataManager.shared.bookmarks }
+    let bookmarks = RealmManager.bookmarks
+
+    let sections = RealmManager.sections
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -29,13 +31,9 @@ class BookmarksTableViewController : UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if segue.identifier == "Bookmarks to Section",
-            let destination = segue.destination as? SectionViewController,
-            let indexPath = sender as? IndexPath {
-
-            let bookmark = bookmarks[indexPath.row]
-
-            destination.section = bookmark.part?.section
+        if segue.identifier == "Bookmarks to Section", let destination = segue.destination as? SectionViewController {
+            destination.section = sections[0]
+            destination.sections = sections
             destination.indexPath = sender as! IndexPath
         }
     }
@@ -45,14 +43,14 @@ class BookmarksTableViewController : UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarkCell") as! BookmarkTableViewCell
 
         let bookmark = bookmarks[indexPath.row]
+        let section = bookmark.section!
         let part = bookmark.part!
-        let section = bookmark.part?.section
 
-        cell.chapterTitleLabel.text = section!.title!.uppercased()
+        cell.chapterTitleLabel.text = section.title.uppercased()
         cell.titleLabel.text = part.title
         cell.bodyLabel.text = part.content
-        cell.chapterNumberLabel.text = section!.chapterNumber
-        cell.badgeImageView.image = UIImage(named: "Bookmarks/\(part.type ?? "text")")
+        cell.chapterNumberLabel.text = section.chapterNumber
+        cell.badgeImageView.image = UIImage(named: "Bookmarks/" + (part.typeName))
 
         return cell
     }
@@ -62,8 +60,8 @@ class BookmarksTableViewController : UITableViewController {
         if editingStyle == .delete {
             tableView.beginUpdates()
 
-            let bookmark = CoreDataManager.shared.bookmarks[indexPath.row]
-            CoreDataManager.shared.remove(bookmark)
+            let bookmark = self.bookmarks[indexPath.row]
+            RealmManager.remove(bookmark)
 
             tableView.deleteRows(at: [indexPath], with: .top)
             tableView.endUpdates()

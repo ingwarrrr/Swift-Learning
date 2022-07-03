@@ -10,75 +10,63 @@ import UIKit
 
 class ChaptersViewController: UIViewController {
 
-    @IBOutlet weak var chapterCollectionView: UICollectionView!
-
-    let sections = RealmManager.sections
-
     override func viewDidLoad() {
+
         super.viewDidLoad()
 
-        chapterCollectionView.delegate = self
-        chapterCollectionView.dataSource = self
-    }
-}
+        let searchController = UISearchController(searchResultsController: nil)
 
-extension ChaptersViewController : UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sections.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sectionCell", for: indexPath) as! SectionCollectionViewCell
-        let section = sections[indexPath.row]
-        cell.titleLabel.text = section.title
-        cell.captionLabel.text = section.caption
-        cell.coverImageView.setImage(from: section.imageURL!)
-        
-        cell.layer.transform = animateCell(cellFrame: cell.frame)
-        
-        return cell
-    }
-}
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
 
-extension ChaptersViewController : UIScrollViewDelegate {
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        if let collectionView = scrollView as? UICollectionView {
+        searchController.searchBar.placeholder = "Search for titles, terms and content"
+        searchController.obscuresBackgroundDuringPresentation = false
+
+        definesPresentationContext = true
+
+        searchController.searchBar.sizeToFit()
+
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
+    }
+
+    var chapterViewController : ChapterViewController?
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        guard let identifier = segue.identifier else { return }
+
+        switch identifier {
+        case "Embed Chapter":
+
+            let destination = segue.destination as! ChapterViewController
+
+            destination.chapter = RealmManager.chapter(withId: "1")
+            destination.view.translatesAutoresizingMaskIntoConstraints = false
+
+            chapterViewController = destination
             
-            for cell in collectionView.visibleCells as! Array<SectionCollectionViewCell> {
-                let indexPath = collectionView.indexPath(for: cell)!
-                let attributes = collectionView.layoutAttributesForItem(at: indexPath)!
-                let cellFrame = collectionView.convert(attributes.frame, to: view)
-                
-                let translationX = cellFrame.origin.x / 5
-                cell.coverImageView.transform = CGAffineTransform(translationX: translationX, y: 0)
-                
-                cell.layer.transform = animateCell(cellFrame: cellFrame)
-            }
+        default: break
         }
     }
-    
-    func animateCell(cellFrame: CGRect) -> CATransform3D {
-        
-        let angleFromX = Double((-cellFrame.origin.x) / 10)
-        let angle = CGFloat((angleFromX * Double.pi) / 180.0)
-        var transform = CATransform3DIdentity
-        transform.m34 = -1.0/1000
-        let rotation = CATransform3DRotate(transform, angle, 0, 1, 0)
-        
-        var scaleFromX = (1000 - (cellFrame.origin.x - 200)) / 1000
-        let scaleMax: CGFloat = 1.0
-        let scaleMin: CGFloat = 0.6
-        if scaleFromX > scaleMax {
-            scaleFromX = scaleMax
-        }
-        if scaleFromX < scaleMin {
-            scaleFromX = scaleMin
-        }
-        let scale = CATransform3DScale(CATransform3DIdentity, scaleFromX, scaleFromX, 1)
-        
-        return CATransform3DConcat(rotation, scale)
+}
+
+extension ChaptersViewController : UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) { return }
+}
+
+extension ChaptersViewController : UISearchBarDelegate {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+
+        chapterViewController?.searchText = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(false, animated: true)
     }
 }

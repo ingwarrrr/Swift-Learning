@@ -37,6 +37,7 @@
 		79B4EF762080187C002F8BD6 /* String+HTMLDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4EF752080187C002F8BD6 /* String+HTMLDecoding.swift */; };
 		79B4EF7820801E29002F8BD6 /* UIColor+Hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4EF7720801E29002F8BD6 /* UIColor+Hexadecimal.swift */; };
 		79B4EF7B20811180002F8BD6 /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4EF7A20811180002F8BD6 /* UIImageView+Kingfisher.swift */; };
+		79DFDD5E208540E00061DC44 /* ChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFDD5D208540E00061DC44 /* ChapterViewController.swift */; };
 		79E0A7FB201A71B700FCCD58 /* UILabel+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0A7FA201A71B700FCCD58 /* UILabel+Inspectable.swift */; };
 		79E0A7FD201A728100FCCD58 /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0A7FC201A728100FCCD58 /* DiscountViewController.swift */; };
 		79F163E6204F2A5600F58C8F /* UILabel+DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F163E5204F2A5600F58C8F /* UILabel+DynamicType.swift */; };
@@ -86,6 +87,7 @@
 		79B4EF752080187C002F8BD6 /* String+HTMLDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLDecoding.swift"; sourceTree = "<group>"; };
 		79B4EF7720801E29002F8BD6 /* UIColor+Hexadecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hexadecimal.swift"; sourceTree = "<group>"; };
 		79B4EF7A20811180002F8BD6 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		79DFDD5D208540E00061DC44 /* ChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterViewController.swift; sourceTree = "<group>"; };
 		79E0A7FA201A71B700FCCD58 /* UILabel+Inspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Inspectable.swift"; sourceTree = "<group>"; };
 		79E0A7FC201A728100FCCD58 /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
 		79F163E5204F2A5600F58C8F /* UILabel+DynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DynamicType.swift"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				9698CD201FBB5DE000501C47 /* HomeViewController.swift */,
 				9688C5C81FE72D3200BCD68A /* SectionCollectionViewCell.swift */,
 				7932CE7E200BDD810006980E /* ChaptersViewController.swift */,
+				79DFDD5D208540E00061DC44 /* ChapterViewController.swift */,
 				7932CE82200BE1890006980E /* BookmarksTableViewController.swift */,
 				7932CE80200BE1390006980E /* BookmarkTableViewCell.swift */,
 				9688C5C41FE72BF000BCD68A /* Data.swift */,
@@ -410,6 +413,7 @@
 				96ABF7311FEEA64300AF4146 /* TestimonialViewController.swift in Sources */,
 				79E0A7FD201A728100FCCD58 /* DiscountViewController.swift in Sources */,
 				7919265B205142D3001A2D5B /* CATransform3D+Perspective.swift in Sources */,
+				79DFDD5E208540E00061DC44 /* ChapterViewController.swift in Sources */,
 				797EEE91202371BE00123433 /* ScoreCollectionViewCell.swift in Sources */,
 				9688C5C91FE72D3200BCD68A /* SectionCollectionViewCell.swift in Sources */,
 				799945282018E9B3003AFA48 /* InteractionPanToClose.swift in Sources */,

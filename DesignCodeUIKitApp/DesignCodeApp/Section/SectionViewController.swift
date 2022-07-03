@@ -43,7 +43,7 @@ class SectionViewController: UIViewController {
             coverImageView.setImage(from: url)
         }
 
-        progressLabel.text = "\(indexPath.row+1) / \(sections.count)"
+        // progressLabel.text = "\(indexPath.row+1) / \(sections.count)"
     }
     
     override var prefersStatusBarHidden: Bool { return true }

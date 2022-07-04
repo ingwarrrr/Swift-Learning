@@ -2,8 +2,7 @@
 //  RealmManager.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 11/04/18.
-//  Copyright © 2018 Meng To. All rights reserved.
+//  Created by Igor on 
 //
 
 import RealmSwift
@@ -24,12 +23,53 @@ class RealmManager {
             .first
     }
 
-    class func remove(_ bookmark : Bookmark) {
+    class func remove(_ object : Object) {
 
-        try! realm.write { realm.delete(bookmark) }
+        try! realm.write { realm.delete(object) }
+    }
+
+    class func add(_ object : Object) {
+
+        try! realm.write { realm.add(object) }
+    }
+
+    class func section(for part : Part) -> Section? {
+
+        return realm
+            .objects(Section.self)
+            .filter("id = %@", part.sectionId)
+            .first
+    }
+
+    class func part(for bookmark : Bookmark) -> Part? {
+
+        return realm
+            .objects(Part.self)
+            .filter("bookmarkId = %@", bookmark.id)
+            .first
+    }
+
+    class func bookmark(for part : Part) -> Bookmark? {
+
+        return realm
+            .objects(Bookmark.self)
+            .filter("id = %@", part.bookmarkId)
+            .first
     }
 
     class func updateContent () {
+
+        Bookmarks.all.dataTask { (data) in
+
+            let decorder = JSONDecoder()
+
+            do {
+                let bookmarks = try decorder.decode(Array<Bookmark>.self, from: data)
+                try realm.write { realm.add(bookmarks, update: true) }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }.resume()
 
         Content.load { (response : Response<Content>) in
 

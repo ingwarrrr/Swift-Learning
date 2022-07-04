@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  DesignCodeApp
 //
-//  Created by Meng To on 11/14/17.
-//  Copyright © 2017 Meng To. All rights reserved.
+//  Created by Igor on 
 //
 
 import UIKit
@@ -74,6 +73,7 @@ class HomeViewController: UIViewController {
 
             destination.chapter = RealmManager.chapter(withId: "1")
             destination.view.translatesAutoresizingMaskIntoConstraints = false
+            destination.delegate = self
 
         case "HomeToSection":
             let destination = segue.destination as! SectionViewController

@@ -2,8 +2,7 @@
 //  ChapterViewController.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 16/04/18.
-//  Copyright © 2018 Meng To. All rights reserved.
+//  Created by Igor on 
 //
 
 import UIKit
@@ -28,6 +27,8 @@ class ChapterViewController: UIViewController {
 extension ChapterViewController : UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+        guard chapter != nil else { return 0 }
 
         if searchText.count == 0 {
 

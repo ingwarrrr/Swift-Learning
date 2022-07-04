@@ -2,8 +2,7 @@
 //  PresentMoreViewController.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 07/03/18.
-//  Copyright © 2018 Meng To. All rights reserved.
+//  Created by Igor on 
 //
 
 import UIKit

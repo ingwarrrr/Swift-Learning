@@ -2,8 +2,7 @@
 //  ContentAPI.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 27/03/18.
-//  Copyright © 2018 Meng To. All rights reserved.
+//  Created by Igor on 
 //
 
 import RealmSwift
@@ -50,15 +49,6 @@ class Chapter : Object, Decodable {
         sections = List<Section>()
         sections.append(objectsIn: sectionsArray)
     }
-}
-
-class Bookmark : Object, Decodable {
-
-    @objc dynamic var section : Section?
-    @objc dynamic var sectionId : String = ""
-
-    @objc dynamic var part : Part?
-    @objc dynamic var partId : String = ""
 }
 
 class Section : Object, Decodable {
@@ -122,6 +112,8 @@ class Part : Object, Decodable {
     @objc dynamic var body : String = ""
 
     @objc dynamic var image : String = ""
+
+    @objc dynamic var bookmarkId : String = ""
 
     var imageURL : URL? { return URL(string: image) }
 

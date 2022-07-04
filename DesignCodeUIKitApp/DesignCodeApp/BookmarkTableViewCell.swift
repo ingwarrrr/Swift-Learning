@@ -2,8 +2,7 @@
 //  BookmarkTableViewCell.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 19/12/17.
-//  Copyright © 2017 Meng To. All rights reserved.
+//  Created by Igor on 
 //
 
 import UIKit
@@ -31,5 +30,19 @@ class BookmarkTableViewCell : UITableViewCell {
                 NSLayoutConstraint.deactivate(accessibilityConstraints)
             }
         }
+    }
+
+    func configure(for part : Part, with section : Section) {
+
+        if part.title == "" {
+            titleLabel.text = part.subhead
+        } else {
+            titleLabel.text = part.title
+        }
+
+        chapterTitleLabel.text = section.title.uppercased()
+        bodyLabel.attributedText = part.body.wrappedIntoStyle.htmlToAttributedString
+        chapterNumberLabel.text = section.chapterId
+        badgeImageView.image = UIImage(named: "Bookmarks/" + "text")
     }
 }

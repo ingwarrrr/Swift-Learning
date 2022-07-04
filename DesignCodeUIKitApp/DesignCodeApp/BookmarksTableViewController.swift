@@ -2,8 +2,7 @@
 //  BookmarksTableViewController.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 14/01/18.
-//  Copyright © 2018 Meng To. All rights reserved.
+//  Created by Igor on 
 //
 
 import UIKit
@@ -43,14 +42,10 @@ class BookmarksTableViewController : UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarkCell") as! BookmarkTableViewCell
 
         let bookmark = bookmarks[indexPath.row]
-        let section = bookmark.section!
-        let part = bookmark.part!
+        guard let part = RealmManager.part(for: bookmark),
+            let section = RealmManager.section(for: part) else { return cell }
 
-        cell.chapterTitleLabel.text = section.title.uppercased()
-        cell.titleLabel.text = part.title
-        cell.bodyLabel.text = part.body
-        cell.chapterNumberLabel.text = section.chapterId
-        cell.badgeImageView.image = UIImage(named: "Bookmarks/" + "text")
+        cell.configure(for: part, with: section)
 
         return cell
     }
@@ -61,6 +56,8 @@ class BookmarksTableViewController : UITableViewController {
             tableView.beginUpdates()
 
             let bookmark = self.bookmarks[indexPath.row]
+
+            Bookmarks.remove(bookmark).dataTask(completion: nil).resume()
             RealmManager.remove(bookmark)
 
             tableView.deleteRows(at: [indexPath], with: .top)

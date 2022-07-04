@@ -2,8 +2,7 @@
 //  CATransform3D+Perspective.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 08/03/18.
-//  Copyright © 2018 Meng To. All rights reserved.
+//  Created by Igor on 
 //
 
 import QuartzCore

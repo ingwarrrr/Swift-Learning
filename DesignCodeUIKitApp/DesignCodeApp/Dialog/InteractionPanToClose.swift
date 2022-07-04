@@ -2,8 +2,7 @@
 //  InteractionPanToClose.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 24/01/18.
-//  Copyright © 2018 Meng To. All rights reserved.
+//  Created by Igor on 
 //
 
 import UIKit

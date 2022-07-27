@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  FeaturedItem.swift
 //  DesignCodeiOS15
 //
-//  Created by Meng To on 2021-10-14.
+//  Created by Meng To on 2021-11-16.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct FeaturedItem: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
             Spacer()
@@ -58,13 +58,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct FeaturedItem_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ContentView()
-            ContentView()
-                .preferredColorScheme(.dark)
-                .previewDevice("iPhone 13 mini")
-        }
+        FeaturedItem()
     }
 }

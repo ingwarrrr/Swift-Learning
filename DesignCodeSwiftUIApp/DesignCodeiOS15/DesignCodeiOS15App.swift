@@ -2,7 +2,7 @@
 //  DesignCodeiOS15App.swift
 //  DesignCodeiOS15
 //
-//  Created by Meng To on 2021-10-14.
+//  Created by Igor on 2021-10-14.
 //
 
 import SwiftUI

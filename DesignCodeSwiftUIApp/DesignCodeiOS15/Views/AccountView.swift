@@ -2,7 +2,7 @@
 //  AccountView.swift
 //  DesignCodeiOS15
 //
-//  Created by Meng To on 2021-10-20.
+//  Created by Igor on 2021-10-20.
 //
 
 import SwiftUI
@@ -43,7 +43,7 @@ struct AccountView: View {
                         .offset(x: 200, y: 0)
                         .scaleEffect(0.6)
                 )
-            Text("Meng To")
+            Text("Igor")
                 .font(.title.weight(.semibold))
             HStack {
                 Image(systemName: "location")

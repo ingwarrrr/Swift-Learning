@@ -2,7 +2,7 @@
 //  Styles.swift
 //  DesignCodeiOS15
 //
-//  Created by Meng To on 2021-10-20.
+//  Created by Igor on 2021-10-20.
 //
 
 import SwiftUI
@@ -16,7 +16,7 @@ struct StrokeStyle: ViewModifier {
                 .stroke(
                     .linearGradient(
                         colors: [
-                            .white.opacity(colorScheme == .dark ? 0.6 : 0.3),
+                            .white.opacity(colorScheme == .dark ? 0.1 : 0.3),
                             .black.opacity(colorScheme == .dark ? 0.3 : 0.1)
                         ], startPoint: .top, endPoint: .bottom
                     )

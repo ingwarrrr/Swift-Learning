@@ -52,7 +52,7 @@ struct HomeView: View {
     
     var scrollDetection: some View {
         GeometryReader { proxy in
-//                Text("\(proxy.frame(in: .named("scroll")).minY)")
+            // Text("\(proxy.frame(in: .named("scroll")).minY)")
             Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
         }
         .frame(height: 0)
@@ -87,7 +87,7 @@ struct HomeView: View {
                                 .offset(x: minX / 2)
                         )
                     
-//                    Text("\(proxy.frame(in: .global).minX)")
+                    //                    Text("\(proxy.frame(in: .global).minX)")
                 }
             }
         }

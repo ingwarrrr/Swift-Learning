@@ -2,7 +2,7 @@
 //  FeaturedItem.swift
 //  DesignCodeiOS15
 //
-//  Created by Meng To on 2021-11-16.
+//  Created by Meng To on 2021-11-18.
 //
 
 import SwiftUI
@@ -54,7 +54,7 @@ struct FeaturedItem: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 230)
                 .offset(x: 32, y: -80)
-        )
+    )
     }
 }
 

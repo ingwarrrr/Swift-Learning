@@ -2,7 +2,7 @@
 //  NavigationBar.swift
 //  DesignCodeiOS15
 //
-//  Created by Meng To on 2021-11-16.
+//  Created by Meng To on 2021-11-18.
 //
 
 import SwiftUI
@@ -19,7 +19,7 @@ struct NavigationBar: View {
                 .opacity(hasScrolled ? 1 : 0)
             
             Text(title)
-                .animatableFont(size: hasScrolled ? 22 : 34, weight: .bold)
+                .font(.largeTitle.weight(.bold))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 20)
                 .padding(.top, 20)

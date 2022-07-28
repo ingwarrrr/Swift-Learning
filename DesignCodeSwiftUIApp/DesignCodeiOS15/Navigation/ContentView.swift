@@ -11,7 +11,7 @@ struct ContentView: View {
     @AppStorage("selectedTab") var selectedTab: Tab = .home
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             
             switch selectedTab {
             case .home:

@@ -2,7 +2,7 @@
 //  FeaturedItem.swift
 //  DesignCodeiOS15
 //
-//  Created by Igor on 2021-11-18.
+//  Created by Igor on 2022-07-18.
 //
 
 import SwiftUI
